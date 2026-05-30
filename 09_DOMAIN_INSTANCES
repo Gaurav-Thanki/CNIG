@@ -1,0 +1,146 @@
+# 09_DOMAIN_INSTANCES.md
+
+Constraint-Native Infrastructure Governance (CNIG)  
+Domain Instances Layer
+
+---
+
+## 1. EV Grid Systems
+
+EV grid systems represent high-concurrency energy distribution networks where system state is defined by:
+
+- demand load distribution  
+- transformer thermal constraints  
+- hospital and critical infrastructure priority loads  
+- regional grid stability thresholds  
+- EV charging elasticity under load pressure  
+
+### CNIG Interpretation
+
+In this domain:
+
+> admissibility is defined by physical and safety constraints over energy distribution state space
+
+Key property:
+
+- EV load is not simply scheduled  
+- EV load is evaluated as a constrained variable within grid stability space  
+
+Invalid states include:
+
+- transformer overload conditions  
+- hospital load starvation  
+- grid instability threshold violations  
+
+---
+
+## 2. Datacenter Systems
+
+Datacenter systems operate as constrained compute substrates where system state depends on:
+
+- workload placement  
+- thermal distribution  
+- cooling system capacity  
+- resource allocation topology  
+- power distribution constraints  
+
+### CNIG Interpretation
+
+Admissibility is defined by:
+
+> thermally and topologically bounded compute state space
+
+Key property:
+
+- scheduling is a state transition problem, not a resource allocation heuristic  
+- thermal constraints define hard state boundaries  
+
+Invalid states include:
+
+- thermal runaway zones  
+- uneven hotspot propagation  
+- cooling saturation states  
+
+---
+
+## 3. Kubernetes Systems
+
+Kubernetes systems represent distributed orchestration layers over heterogeneous compute nodes.
+
+System state includes:
+
+- scheduling decisions  
+- node health distribution  
+- service topology  
+- control plane consistency state  
+- failure domain boundaries  
+
+### CNIG Interpretation
+
+Admissibility is defined by:
+
+> failure-domain bounded orchestration state space
+
+Key property:
+
+- workload placement is evaluated before execution  
+- failure domains act as structural constraints on state transitions  
+
+Invalid states include:
+
+- cross-zone correlated failure placement  
+- scheduler drift beyond isolation boundaries  
+- control plane inconsistency under partition  
+
+---
+
+## 4. AI Agent Systems
+
+AI agent systems introduce execution paths driven by tool usage, delegation, and multi-step reasoning chains.
+
+System state includes:
+
+- tool access permissions  
+- delegation graphs  
+- execution planning state  
+- memory / retrieval context  
+- multi-agent coordination topology  
+
+### CNIG Interpretation
+
+Admissibility is defined by:
+
+> bounded action reachability within delegated execution space
+
+Key property:
+
+- agent behavior is constrained by reachable action space, not intent alone  
+- tool composition defines emergent capability boundaries  
+
+Invalid states include:
+
+- unintended tool chaining leading to privilege escalation  
+- uncontrolled delegation expansion  
+- emergent execution paths outside governance constraints  
+
+---
+
+## 5. Cross-Domain Structural Insight
+
+Across all domains, a consistent pattern emerges:
+
+> system safety depends on constraining reachable state space under composition pressure
+
+Not domain-specific logic.
+
+Not runtime correction.
+
+But:
+
+- pre-execution admissibility filtering over system state transitions  
+
+---
+
+## 6. Canonical Attribution
+
+Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
