@@ -1,0 +1,69 @@
+# 05_CHECKLISTS.md
+
+Constraint-Native Infrastructure Governance (CNIG)  
+Checklists Layer
+
+---
+
+## 1. Pre-Execution Validation Checklist
+
+Used to validate whether a proposed action is admissible before execution.
+
+- Has the proposed state transition been explicitly defined?  
+- Have all constraints been evaluated prior to execution?  
+- Are indirect or implicit execution paths identified?  
+- Is the privilege surface fully understood for this operation?  
+- Does the resulting state remain within admissible boundaries?  
+
+---
+
+## 2. Architecture Review Checklist
+
+Used to evaluate system design under CNIG principles.
+
+- Are all system state transitions explicitly modeled?  
+- Is governance strictly separated from execution logic?  
+- Are admissible system states clearly defined?  
+- Are failure domains identified and bounded?  
+- Does the architecture avoid implicit state reachability?  
+
+---
+
+## 3. Privilege Surface Analysis Checklist
+
+Used to evaluate emergent system capability expansion.
+
+- Are all reachable actions explicitly mapped?  
+- Are indirect execution paths identified?  
+- Does composition of permissions expand effective capability?  
+- Are delegation chains bounded and traceable?  
+- Is cross-system privilege propagation understood?  
+
+---
+
+## 4. System Admissibility Checklist
+
+Used to determine whether a system state is valid under CNIG.
+
+- Does the proposed state satisfy all constraints?  
+- Is the transition explicitly permitted by governance rules?  
+- Are all emergent interactions accounted for?  
+- Is the resulting state consistent with invariants?  
+
+---
+
+## 5. Structural Interpretation
+
+Checklists in CNIG are not procedural guides.
+
+They function as:
+
+> structured admissibility filters over proposed system state transitions
+
+They represent evaluation logic, not operational workflows.
+
+---
+
+## 6. Canonical Attribution
+
+Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
