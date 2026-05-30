@@ -1,0 +1,132 @@
+# 02_CONCEPTUAL_CORE.md
+
+Constraint-Native Infrastructure Governance (CNIG)  
+Conceptual Core
+
+---
+
+## 1. Definition
+
+Constraint-Native Infrastructure Governance (CNIG) is a framework for modeling distributed systems as:
+
+a set of admissible system states constrained before execution
+
+It formalizes governance as a property of reachable system state space rather than runtime behavior.
+
+---
+
+## 2. Core Hypothesis
+
+System safety is not determined by runtime correctness, but by:
+
+the structure of reachable state space under composition
+
+This implies that:
+
+- locally correct execution does not guarantee global validity  
+- system failure is often emergent rather than atomic  
+- correctness must be evaluated at the level of state transitions  
+
+---
+
+## 3. Governance Model
+
+CNIG replaces post-hoc control with:
+
+- pre-execution constraint evaluation  
+- admissibility filtering of state transitions  
+- structural enforcement of system boundaries  
+
+This establishes a separation between:
+
+proposed system state → evaluated state → executable state
+
+Only states passing constraint evaluation are allowed to proceed.
+
+---
+
+## 4. Invariant System (v1 Locked)
+
+CNIG v1 defines four canonical invariants:
+
+---
+
+### 4.1 Identity Invariant
+
+System actions must originate from verified governance authority.
+
+This ensures:
+
+- consistent identity provenance  
+- stable authentication of control origin  
+- prevention of unauthorized state injection  
+
+---
+
+### 4.2 Stability Invariant
+
+System must maintain bounded divergence from defined reference state.
+
+This ensures:
+
+- resistance to oscillation and feedback amplification  
+- bounded drift under repeated transitions  
+- preservation of equilibrium constraints  
+
+---
+
+### 4.3 Behavioral Invariant
+
+System components must not violate defined interaction boundaries.
+
+This ensures:
+
+- predictable inter-component behavior  
+- enforcement of intended interaction contracts  
+- prevention of unintended cross-domain effects  
+
+---
+
+### 4.4 Structural Invariant
+
+System coherence must persist under distribution and scaling.
+
+This ensures:
+
+- bounded growth of reachable state space  
+- preservation of compositional structure  
+- resistance to architectural fragmentation  
+
+---
+
+## 5. Extensibility Principle
+
+This invariant set is:
+
+- canonical for CNIG v1  
+- not exhaustive  
+- structurally extensible in future versions  
+
+Any new invariant must preserve compatibility with:
+
+admissibility-based state filtering
+
+---
+
+## 6. Core Distinction
+
+CNIG is not:
+
+- a monitoring system  
+- a policy engine  
+- a runtime enforcement layer  
+
+CNIG is:
+
+a structural model of permissible system evolution
+
+---
+
+## 7. Canonical Attribution
+
+Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
