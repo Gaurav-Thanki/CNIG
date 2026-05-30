@@ -1,0 +1,85 @@
+# 07_STATE_MODEL.md
+
+Constraint-Native Infrastructure Governance (CNIG)  
+State Model Layer
+
+---
+
+## 1. System State Definition
+
+A system state is a complete snapshot of a distributed system at a given moment, including:
+
+- identity configuration  
+- permission structure  
+- execution context  
+- service topology  
+- orchestration state  
+- inter-component dependencies  
+
+A system state represents the full configuration space of system behavior.
+
+---
+
+## 2. Admissibility Rule
+
+A system state is considered executable only if:
+
+> all constraints evaluate to true prior to execution
+
+If any constraint evaluation fails, the state is classified as non-admissible and must not be executed.
+
+---
+
+## 3. State Transition Model
+
+System evolution is modeled as a constrained transition process:
+
+1. Proposed state transition is generated  
+2. Constraints are evaluated over proposed state  
+3. State is classified as admissible or non-admissible  
+4. Only admissible states are executed  
+
+This defines a gated transition pipeline over state space.
+
+---
+
+## 4. Governance vs Execution Separation
+
+CNIG enforces a strict separation:
+
+- Governance defines reachable state space  
+- Execution performs state transitions within that space  
+
+Execution does not influence governance evaluation.
+
+Governance always precedes execution.
+
+---
+
+## 5. State-Space Interpretation
+
+The system does not govern actions directly.
+
+Instead, it governs:
+
+> the set of states actions are permitted to reach
+
+This shifts governance from behavior control to state-space restriction.
+
+---
+
+## 6. Structural Property
+
+The CNIG state model defines a bounded region within the full system state space:
+
+- admissible states form the valid subspace  
+- non-admissible states are excluded pre-execution  
+- transitions are only allowed within bounded constraints  
+
+This creates a structural filter over system evolution.
+
+---
+
+## 7. Canonical Attribution
+
+Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
