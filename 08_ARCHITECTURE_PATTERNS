@@ -1,0 +1,96 @@
+# 08_ARCHITECTURE_PATTERNS.md
+
+Constraint-Native Infrastructure Governance (CNIG)  
+Architecture Patterns Layer
+
+---
+
+## 1. Composition Failure
+
+Composition failure occurs when individually valid system components produce an invalid global system state under interaction.
+
+Key property:
+
+- local correctness does not imply global admissibility  
+- system failure emerges from interaction structure, not component failure  
+
+This is the primary failure class CNIG is designed to expose.
+
+---
+
+## 2. Invisible Privilege Surfaces
+
+Invisible privilege surfaces arise when:
+
+> effective system capability exceeds explicitly defined permission models
+
+This occurs through:
+
+- multi-layer delegation chains  
+- service-to-service trust propagation  
+- orchestration-driven implicit execution paths  
+
+Result:
+
+The true reachable action space is larger than the declared privilege model.
+
+---
+
+## 3. Governance Contracts
+
+Governance contracts define explicit admissibility constraints exposed by system components.
+
+Each component must specify:
+
+- valid input states  
+- valid transition conditions  
+- admissible output states  
+
+These contracts allow constraint evaluation before execution.
+
+They shift systems from implicit trust to explicit state-space definition.
+
+---
+
+## 4. Composition-Aware Constraint Principle
+
+CNIG systems must evaluate constraints over:
+
+> composed system state, not isolated components
+
+This ensures that:
+
+- interactions are first-class evaluation objects  
+- emergent behavior is included in governance reasoning  
+- system safety is not reduced to component-level correctness  
+
+---
+
+## 5. Structural Insight
+
+Distributed system failures are dominated by:
+
+> interaction boundary violations rather than component-level defects
+
+CNIG reframes architecture analysis as:
+
+- state-space composition modeling  
+- not service-level correctness validation  
+
+---
+
+## 6. Pattern Summary
+
+CNIG identifies three dominant architectural risk structures:
+
+1. Composition Failure  
+2. Invisible Privilege Surfaces  
+3. Governance Contract Gaps  
+
+These patterns describe how admissible system space becomes incorrectly defined under composition pressure.
+
+---
+
+## 7. Canonical Attribution
+
+Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
