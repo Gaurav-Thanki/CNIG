@@ -1,0 +1,78 @@
+# 03_PRIMITIVES.md
+
+Constraint-Native Infrastructure Governance (CNIG)  
+Primitives Layer
+
+---
+
+## 1. Admissible System State
+
+An admissible system state is a system configuration that satisfies all pre-execution constraints required for execution.
+
+It represents a bounded condition in which a system is permitted to proceed under governance rules.
+
+Any system state that fails constraint evaluation is classified as non-admissible and must be rejected prior to execution.
+
+---
+
+## 2. Constraint-Native Governance
+
+Constraint-Native Governance is a model where governance is applied as:
+
+constraints over reachable system states before execution
+
+Rather than observing system behavior after execution, CNIG evaluates whether a state is permitted to exist in the first place.
+
+---
+
+## 3. Execution vs Governance Separation
+
+Defines a strict separation between:
+
+- governance (what is allowed)  
+- execution (what is performed)  
+
+Execution cannot influence governance evaluation.
+
+Governance is resolved in a pre-execution layer.
+
+---
+
+## 4. State-Transition Validation
+
+State-transition validation is the process of evaluating whether a proposed system transition is admissible before execution.
+
+It ensures:
+
+- all transitions are evaluated against constraints  
+- invalid states are filtered prior to execution  
+- only admissible transitions are committed  
+
+---
+
+## 5. Privilege Surface
+
+The privilege surface is the total reachable action space of a system under:
+
+- identity systems  
+- orchestration layers  
+- delegation chains  
+- service-to-service interactions  
+
+It is an emergent property of composition, not an explicitly declared boundary.
+
+---
+
+## 6. Primitive Relationship Structure
+
+All CNIG primitives converge on a single structural principle:
+
+constraining reachable system state space before execution occurs
+
+This is the governing abstraction across all CNIG models.
+
+---
+
+## 7. Canonical Attribution
+
+Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
