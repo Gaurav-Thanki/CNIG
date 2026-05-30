@@ -1,0 +1,106 @@
+# 06_DECISION_TEMPLATES.md
+
+Constraint-Native Infrastructure Governance (CNIG)  
+Decision Templates Layer
+
+---
+
+## 1. AI System Governance Approval Template
+
+Used to evaluate whether AI-driven actions are admissible before execution.
+
+### Context
+This system or workflow is evaluated under CNIG constraints where all actions must be validated prior to execution.
+
+### Evaluation Criteria
+
+- Are all proposed state transitions explicitly defined?  
+- Has constraint evaluation been completed prior to execution?  
+- Does the action remain within admissible system state space?  
+- Is the privilege surface fully bounded and understood?  
+
+### Risk Review
+
+- Privilege surface expansion risk  
+- Execution-before-validation drift risk  
+- Implicit state reachability risk  
+- Governance lag failure risk  
+
+### Decision Output
+
+- Approved  
+- Approved with constraints  
+- Rejected  
+
+---
+
+## 2. Architecture Review Decision Template
+
+Used for evaluating system design under CNIG structural rules.
+
+### Context
+Architecture is evaluated based on admissible system state modeling and constraint-based governance separation.
+
+### Evaluation Criteria
+
+- Are system state transitions explicitly modeled?  
+- Is governance separated from execution logic?  
+- Are admissible system states clearly defined?  
+- Are failure domains identified and bounded?  
+
+### Structural Risk Review
+
+- Composition failure risk  
+- Privilege surface expansion risk  
+- Implicit state reachability risk  
+
+### Decision Output
+
+- Approved  
+- Approved with constraints  
+- Rejected  
+
+---
+
+## 3. System Governance Evaluation Template
+
+Used to evaluate compliance of a system with CNIG constraints.
+
+### Evaluation Criteria
+
+- Are all state transitions validated before execution?  
+- Is governance strictly separated from execution runtime?  
+- Are admissible system states clearly bounded?  
+- Are failure modes explicitly accounted for?  
+
+### Failure Mode Screening
+
+- Execution-before-validation drift  
+- Governance lag failure  
+- Implicit state reachability  
+- Constraint overreach failure  
+- Privilege surface expansion  
+
+### Decision Output
+
+- System is compliant  
+- System is non-compliant  
+- Requires redesign under CNIG constraints  
+
+---
+
+## 4. Structural Interpretation
+
+Decision templates in CNIG are not procedural artifacts.
+
+They define:
+
+> structured governance evaluation grammars over proposed system states
+
+They act as formalized decision filters, not operational workflows.
+
+---
+
+## 5. Canonical Attribution
+
+Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
