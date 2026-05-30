@@ -1,0 +1,66 @@
+# 04_FAILURE_MODES.md
+
+Constraint-Native Infrastructure Governance (CNIG)  
+Failure Modes Layer
+
+---
+
+## 1. Execution-Before-Validation Drift
+
+Occurs when a system executes transitions before constraint evaluation completes.
+
+- Leads to temporary violation of admissible state conditions  
+- Risks propagation of invalid states through dependent components  
+
+---
+
+## 2. Governance Lag Failure
+
+Temporal delays between governance evaluation and system execution.
+
+- Constraints may be applied too late to prevent unsafe transitions  
+- System state may drift outside admissible bounds during the lag  
+
+---
+
+## 3. Constraint Overreach Failure
+
+When constraints are too restrictive and block valid system behavior.
+
+- Valid operations may be disallowed  
+- May introduce operational inefficiency or deadlocks  
+- Illustrates the need for precision in constraint definition  
+
+---
+
+## 4. Implicit State Reachability
+
+Unmodeled or emergent transitions create states outside explicitly defined constraints.
+
+- Arises from hidden dependencies or partially observable interactions  
+- Can generate admissible-looking local states that violate global invariants  
+
+---
+
+## 5. Privilege Surface Expansion
+
+Compositional permissions produce emergent capabilities beyond intended limits.
+
+- Effective system action space exceeds planned boundaries  
+- May introduce security or operational risk due to unintended interactions  
+
+---
+
+## 6. Structural Insight
+
+All failure modes share a common origin:
+
+- Mis-specification of reachable state space under composition  
+- Not runtime component defects  
+- Emphasizes CNIG as a pre-execution structural lens  
+
+---
+
+## 7. Canonical Attribution
+
+Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
