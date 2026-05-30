@@ -1,0 +1,50 @@
+# CNIG State Space Diagram
+
+## Compositional State-Space Model
+
+LEGEND:
+[A] = Admissible state subset
+[X] = Non-admissible state subset
+
+────────────────────────────────────────
+
+STATE SPACE (S)
+
+X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X
+
+        ┌─────────────────────────┐
+        │   ADMISSIBLE REGION     │
+        │        [A ⊂ S]         │
+        │                         │
+        │   A → A → A → A        │
+        │   ↑       ↘            │
+        │   A → A → A → A        │
+        │           ↘            │
+        │            A → A       │
+        └─────────────────────────┘
+
+X X X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X
+
+────────────────────────────────────────
+
+STATE TRANSITIONS
+
+Valid:
+A → A   (within admissible subset)
+
+Invalid:
+A → X   (violates invariant constraints)
+
+Note:
+X ∉ admissible state space (A ⊂ S)
+
+────────────────────────────────────────
+
+INTERPRETATION
+
+- System does NOT execute full state space S
+- Only admissible subset A ⊂ S is executable
+- CNIG defines the admissible region of reachable system states under composition constraints
