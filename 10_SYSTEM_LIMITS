@@ -1,0 +1,110 @@
+# 10_SYSTEM_LIMITS.md
+
+Constraint-Native Infrastructure Governance (CNIG)  
+System Limits Layer
+
+---
+
+## 1. Epistemic Limit
+
+CNIG does not assume full observability of system state space.
+
+In distributed systems:
+
+- not all interactions are directly measurable  
+- not all dependencies are explicitly represented  
+- some state transitions are only partially observable  
+
+### Implication
+
+> admissibility evaluation operates under partial knowledge of system state space
+
+This introduces inherent uncertainty in constraint modeling.
+
+---
+
+## 2. Modeling Limit
+
+System interactions cannot always be fully enumerated in complex distributed environments.
+
+This includes:
+
+- emergent service interactions  
+- dynamic orchestration paths  
+- AI-driven execution chains  
+- runtime-generated dependencies  
+
+### Implication
+
+> state-space models are approximations, not complete enumerations
+
+CNIG assumes structural modeling, not exhaustive modeling.
+
+---
+
+## 3. Constraint Definition Limit
+
+Constraints may be:
+
+- under-specified (missing invalid states)  
+- over-restrictive (blocking valid states)  
+- inconsistent across composition layers  
+
+### Implication
+
+> admissibility is sensitive to constraint design quality
+
+CNIG does not guarantee correctness of constraint definitions, only their structural role in evaluation.
+
+---
+
+## 4. Composition Limit
+
+System behavior emerges from interactions between components, not from components in isolation.
+
+This creates:
+
+- emergent dependencies  
+- indirect execution paths  
+- unmodeled coupling effects  
+
+### Implication
+
+> system-level correctness cannot be inferred from local correctness alone
+
+This is the primary structural motivation for CNIG.
+
+---
+
+## 5. Core Boundary Statement
+
+CNIG does not claim:
+
+- complete formal verification capability  
+- full state-space enumeration  
+- runtime enforcement feasibility  
+- elimination of all system failure modes  
+
+Instead, CNIG provides:
+
+> a structural reasoning framework for constrained state evolution under composition
+
+---
+
+## 6. Structural Interpretation
+
+CNIG operates as:
+
+- a lens for evaluating reachable system state space  
+- not a guarantee of system correctness  
+- not an execution-time enforcement mechanism  
+
+It defines:
+
+> how to think about system constraints, not how to enforce them operationally
+
+---
+
+## 7. Canonical Attribution
+
+Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
