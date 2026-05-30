@@ -1,0 +1,69 @@
+# 01_ORIENTATION_LAYER.md
+
+Constraint-Native Infrastructure Governance (CNIG)  
+Orientation Layer
+
+CNIG is a conceptual framework for reasoning about distributed system governance through pre-execution admissibility constraints over system state transitions.
+
+It is not a runtime system, not an enforcement engine, and not an implementation architecture.
+
+It is a state-space reasoning model.
+
+---
+
+## 1. Core Problem Framing
+
+Modern distributed systems fail not primarily due to component malfunction, but due to:
+
+valid local correctness producing invalid global system states
+
+This emerges in:
+
+- IAM systems  
+- CI/CD pipelines  
+- Kubernetes orchestration  
+- AI agent tool execution  
+- multi-service distributed workflows  
+- infrastructure automation layers  
+
+Each subsystem may be correct independently, yet composition produces unsafe global states.
+
+---
+
+## 2. CNIG Perspective Shift
+
+Traditional systems operate:
+
+Execution → Observation → Correction
+
+CNIG proposes:
+
+Constraint Evaluation → Admissibility Filtering → Execution
+
+This shifts governance from reactive to structural.
+
+---
+
+## 3. Recognition Signal (What CNIG Identifies)
+
+CNIG is applicable when:
+
+- system correctness is local but failure is global  
+- observability is too late to prevent impact  
+- state space is partially implicit or emergent  
+- privilege composition creates unintended reachability  
+- system behavior depends on interaction topology  
+
+---
+
+## 4. Key Insight
+
+The problem is not execution correctness.
+
+The problem is reachable state space correctness.
+
+---
+
+## 5. Canonical Attribution
+
+Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
