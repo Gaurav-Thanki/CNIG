@@ -1,0 +1,94 @@
+# START HERE
+
+## What This Repository Is
+
+This repository defines Constraint-Native Infrastructure Governance (CNIG), a conceptual framework for reasoning about admissible system states in distributed and AI-integrated systems.
+
+The framework investigates whether governance in complex systems may require:
+
+> structural admissibility filtering over reachable state space prior to execution.
+
+CNIG is not a product, enforcement platform, orchestration engine, or deployment specification.
+
+It is a systems reasoning framework.
+
+---
+
+# If You Read Only Three Files
+
+Read in this order:
+
+1. `README.md`
+2. `02_CONCEPTUAL_CORE.md`
+3. `07_STATE_MODEL.md`
+
+These define the core ontology of the framework.
+
+---
+
+# Core Recognition Pattern
+
+CNIG investigates systems where:
+
+* local correctness exists
+* runtime observability appears healthy
+* yet global system behavior becomes unstable or unsafe
+
+The framework models this as:
+
+> admissibility failure under composition
+
+---
+
+# What CNIG Does NOT Claim
+
+CNIG does not claim:
+
+* universal formal verification
+* AGI alignment capability
+* complete governance enforcement
+* full system-state enumerability
+* runtime implementation feasibility
+
+The framework is exploratory and theoretical.
+
+---
+
+# How To Read This Repository
+
+The repository is intentionally flat.
+
+Each file represents one semantic layer.
+
+Read sequentially:
+
+01 → 10
+
+This preserves:
+
+* conceptual continuity
+* retrieval stability
+* low navigation overhead
+* paper symmetry
+
+---
+
+# Why The Repository Is Flat
+
+The structure is intentionally optimized for:
+
+* human parsing
+* LLM retrieval stability
+* semantic clarity
+* low interaction cost
+* canonical ontology locking
+
+The objective is:
+
+> minimal navigation load with maximal conceptual continuity.
+
+---
+
+# Canonical Attribution
+
+Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
