@@ -2,7 +2,6 @@
 
 ## System State Filtering via CNIG Invariants
 
-
 SYSTEM STATE SPACE (S)
 ────────────────────────────────────────
 
@@ -12,50 +11,50 @@ SYSTEM STATE SPACE (S)
                 ▼
 
 ┌──────────────────────────────────────┐
-│ 1. IDENTITY INVARIANT │
-│ - validates governance origin │
-│ - ensures semantic continuity │
+│ 1. IDENTITY INVARIANT               │
+│ - validates governance origin       │
+│ - ensures semantic continuity       │
 └──────────────────────────────────────┘
-│ │
-▼ ▼
-REJECTED PASSED
+
+        PASS(S) ────────────► S₁
+        REJECT(S) ──────────► ⊘
 
                 │
                 ▼
 
 ┌──────────────────────────────────────┐
-│ 2. STABILITY INVARIANT │
-│ - checks bounded system dynamics │
-│ - prevents drift / oscillation │
+│ 2. STABILITY INVARIANT             │
+│ - checks bounded system dynamics   │
+│ - prevents drift / oscillation     │
 └──────────────────────────────────────┘
-│ │
-▼ ▼
-REJECTED PASSED
+
+        PASS(S₁) ───────────► S₂
+        REJECT(S₁) ─────────► ⊘
 
                 │
                 ▼
 
 ┌──────────────────────────────────────┐
-│ 3. BEHAVIORAL INVARIANT │
-│ - validates global outcome intent │
-│ - checks interaction correctness │
+│ 3. BEHAVIORAL INVARIANT            │
+│ - validates global outcome intent  │
+│ - checks interaction correctness   │
 └──────────────────────────────────────┘
-│ │
-▼ ▼
-REJECTED PASSED
+
+        PASS(S₂) ───────────► S₃
+        REJECT(S₂) ─────────► ⊘
 
                 │
                 ▼
 
 ┌──────────────────────────────────────┐
-│ 4. STRUCTURAL INVARIANT │
-│ - validates topology constraints │
-│ - ensures bounded reachability │
+│ 4. STRUCTURAL INVARIANT            │
+│ - validates topology constraints   │
+│ - ensures bounded reachability     │
 └──────────────────────────────────────┘
-│ │
-▼ ▼
-REJECTED ADMISSIBLE STATES
+
+        PASS(S₃) ───────────► ADMISSIBLE STATES
+        REJECT(S₃) ─────────► ⊘
 
 ────────────────────────────────────────
-OUTPUT: CONSTRAINED SYSTEM STATE SPACE
+OUTPUT: ADMISSIBLE STATE SUBSPACE ⊆ S
 ────────────────────────────────────────
