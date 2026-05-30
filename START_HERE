@@ -1,91 +1,118 @@
 # START HERE
 
-## What This Repository Is
+## Constraint-Native Infrastructure Governance (CNIG)
 
-This repository defines Constraint-Native Infrastructure Governance (CNIG), a conceptual framework for reasoning about admissible system states in distributed and AI-integrated systems.
+This repository defines Constraint-Native Infrastructure Governance (CNIG), a structural framework for reasoning about admissible system states in distributed, cloud-native, and AI-integrated systems.
 
-The framework investigates whether governance in complex systems may require:
+CNIG models systems through a central question:
 
-> structural admissibility filtering over reachable state space prior to execution.
+> What system states are admissible under composition, prior to execution?
 
-CNIG is not a product, enforcement platform, orchestration engine, or deployment specification.
+CNIG is not a product, enforcement mechanism, runtime system, or deployment architecture.
 
-It is a systems reasoning framework.
+It is a state-space reasoning framework over system composition.
 
 ---
 
-# If You Read Only Three Files
+# Repository Structure Principle
 
-Read in this order:
+This repository is intentionally flat.
 
-1. `README.md`
-2. `02_CONCEPTUAL_CORE.md`
-3. `07_STATE_MODEL.md`
+Each file corresponds to a single semantic layer of the CNIG model.
 
-These define the core ontology of the framework.
+There is no hierarchical decomposition beyond this mapping.
+
+All files are ontologically co-equal representations of distinct system dimensions.
+
+---
+
+# Canonical Traversal Rule
+
+The repository is designed for deterministic sequential reading:
+
+01 → 10
+
+This traversal preserves:
+
+- semantic continuity across layers
+- invariant propagation consistency
+- composition-aware understanding of state space
+- minimal cognitive transition cost
+
+This is the canonical reading path.
+
+---
+
+# Minimal Cognitive Kernel (Optional Entry Set)
+
+For reduced onboarding overhead, the following subset defines the minimal closed loop of CNIG reasoning:
+
+- `02_CONCEPTUAL_CORE.md`
+- `03_PRIMITIVES.md`
+- `07_STATE_MODEL.md`
+
+This subset expresses the core system loop:
+
+> definition of system state → constraint primitives → admissibility evaluation under composition
+
+This is not a hierarchy or priority structure.
+
+It is a minimal inference kernel sufficient to understand CNIG semantics before full traversal.
 
 ---
 
 # Core Recognition Pattern
 
-CNIG investigates systems where:
+CNIG applies to systems where:
 
-* local correctness exists
-* runtime observability appears healthy
-* yet global system behavior becomes unstable or unsafe
+- local components are individually correct
+- operational health signals appear valid
+- global system behavior becomes unstable, unsafe, or inconsistent
 
-The framework models this as:
+This class of behavior is modeled as:
 
-> admissibility failure under composition
+> admissibility violation emerging under compositional state transitions
 
 ---
 
-# What CNIG Does NOT Claim
+# What CNIG Does Not Claim
 
 CNIG does not claim:
 
-* universal formal verification
-* AGI alignment capability
-* complete governance enforcement
-* full system-state enumerability
-* runtime implementation feasibility
+- full system verification capability
+- runtime enforcement feasibility
+- complete state-space enumeration
+- AGI alignment guarantees
+- deterministic prevention of all failures
 
-The framework is exploratory and theoretical.
-
----
-
-# How To Read This Repository
-
-The repository is intentionally flat.
-
-Each file represents one semantic layer.
-
-Read sequentially:
-
-01 → 10
-
-This preserves:
-
-* conceptual continuity
-* retrieval stability
-* low navigation overhead
-* paper symmetry
+CNIG is a structural reasoning model, not an implementation system.
 
 ---
 
-# Why The Repository Is Flat
+# Reading Semantics
 
-The structure is intentionally optimized for:
+Each file should be read as:
 
-* human parsing
-* LLM retrieval stability
-* semantic clarity
-* low interaction cost
-* canonical ontology locking
+> a constraint layer over system state evolution under composition
+
+No file is a dependency of another.
+
+Each layer refines the same underlying state-space model from a different perspective.
+
+---
+
+# Design Intent
+
+The repository is optimized for:
+
+- structural clarity of system composition
+- low cognitive load traversal
+- stable retrieval under large-context reasoning systems
+- invariance-preserving interpretation across domains
 
 The objective is:
 
-> minimal navigation load with maximal conceptual continuity.
+> minimize representational overhead while preserving full compositional expressiveness
 
 ---
 
