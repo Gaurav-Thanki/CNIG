@@ -1,0 +1,123 @@
+# CNIG Overview
+
+## Constraint-Native Infrastructure Governance
+
+Constraint-Native Infrastructure Governance (CNIG) is a conceptual framework for modeling distributed system governance through admissibility constraints over state transitions.
+
+The framework proposes a shift from:
+
+* post-execution monitoring
+* reactive remediation
+* runtime-only observability
+
+toward:
+
+* pre-execution admissibility evaluation
+* structural state-space governance
+* composition-aware constraint reasoning
+
+---
+
+# Central Thesis
+
+The framework investigates the proposition that:
+
+> valid components may compose into invalid global systems under unconstrained reachable state space expansion.
+
+This distinction becomes increasingly important in:
+
+* distributed orchestration systems
+* AI-integrated execution systems
+* federated identity systems
+* infrastructure automation layers
+* multi-agent coordination systems
+
+---
+
+# Structural Interpretation
+
+CNIG interprets system governance as:
+
+> a filtering problem over reachable global system states.
+
+Under this interpretation:
+
+* proposed transitions are evaluated before execution
+* admissibility constraints define valid state space
+* governance exists independently of runtime behavior
+
+---
+
+# Key Conceptual Shift
+
+Traditional systems frequently govern through:
+
+Execution → Observation → Correction
+
+CNIG explores:
+
+Constraint Evaluation → Admissibility Filtering → Execution
+
+This reframes governance from:
+
+* reactive detection
+  to
+* structural prevention of inadmissible states
+
+---
+
+# Invariant Structure
+
+CNIG v1 currently defines four invariants:
+
+* Identity Invariant
+* Stability Invariant
+* Behavioral Invariant
+* Structural Invariant
+
+These invariants represent the current conceptual basis of the framework.
+
+The set is intentionally extensible.
+
+Different infrastructure domains may require:
+
+* additional invariants
+* reduced invariant sets
+* substrate-specific admissibility definitions
+
+---
+
+# Relationship To AI Systems
+
+CNIG is not an AI alignment architecture.
+
+However, the framework investigates whether advanced probabilistic systems may exhibit:
+
+* semantic drift
+* recursive reinterpretation
+* emergent capability expansion
+* unstable composition behavior
+
+under unconstrained state-space evolution.
+
+The framework explores whether governance invariants may provide a useful interpretive lens for analyzing such systems.
+
+---
+
+# Repository Design Philosophy
+
+The repository is designed for:
+
+* low cognitive load
+* semantic clarity
+* retrieval stability
+* machine-parseable symmetry
+* direct mapping to formal publication structures
+
+Each file corresponds to a single semantic layer.
+
+---
+
+# Canonical Attribution
+
+Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
