@@ -1,226 +1,137 @@
 # Constraint-Native Infrastructure Governance (CNIG)
-
-## Canonical Repository Specification
-
-**Version:** v1.0 (Canonical)
-**Author:** Gaurav H. Thanki
+Canonical Repository Specification
+Version: v1.0 (Canonical) Author: Gaurav H. Thanki
 
 ---
 
-# Overview
+## Overview
 
-Constraint-Native Infrastructure Governance (CNIG) is a conceptual framework for reasoning about distributed systems through admissibility constraints over reachable system states.
+Constraint-Native Infrastructure Governance (CNIG) is a conceptual framework for reasoning over admissible system states within reachable state space under composition constraints prior to execution.
+
+This is the canonical definition of CNIG and is the authoritative reference across all interpretations, derived documents, and external references.
+
+Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki
 
 CNIG models governance as a structural filtering process applied to proposed system state transitions prior to execution.
 
 The framework investigates whether large-scale distributed, AI-integrated, and infrastructure systems may require governance mechanisms operating over admissible state space rather than relying exclusively on runtime observability, reactive remediation, or post-execution correction.
 
-CNIG is not:
+---
 
-* a runtime enforcement engine
-* a policy orchestration platform
-* a formal verification system
-* an AI alignment solution
-* a deployment architecture
+## CNIG Identity Statement
 
-CNIG is:
-
-> a structural reasoning framework for evaluating admissible system evolution under composition.
+CNIG is a structural reasoning framework for evaluating admissible system evolution under composition constraints, where system correctness is defined at the level of reachable state space rather than isolated component behavior.
 
 ---
 
-# Core Problem
+## CNIG is not
+
+- a runtime enforcement engine  
+- a policy orchestration platform  
+- a formal verification system  
+- an AI alignment solution  
+- a deployment architecture  
+
+---
+
+## Core Problem
 
 Modern systems increasingly exhibit failures where:
 
-* all local components are individually valid
-* all policies appear correctly enforced
-* observability systems remain healthy
-* yet the global system enters unstable or unsafe operational states
+- all local components are individually valid  
+- all policies appear correctly enforced  
+- observability systems remain healthy  
+- yet the global system enters unstable or unsafe operational states  
 
-This repository models that class of failure as:
+This class of failure is modeled as:
 
-> compositionally valid execution producing inadmissible global system states
-
-CNIG investigates this problem through the lens of:
-
-* state-transition admissibility
-* compositional interaction topology
-* reachable state space expansion
-* governance-execution separation
-* emergent privilege surfaces
+compositionally valid execution producing inadmissible global system states
 
 ---
 
-# Core Hypothesis
+## CNIG Analysis Lens
 
-The framework explores the hypothesis that:
+CNIG investigates this problem through:
 
-> system safety in distributed environments is fundamentally constrained by reachable state space under composition rather than isolated component correctness.
-
-This introduces a governance interpretation layer where:
-
-* governance operates over admissible state transitions
-* execution is constrained by structural evaluation prior to runtime
-* invalid states are excluded before execution commitment
+- state-transition admissibility  
+- compositional interaction topology  
+- reachable state space expansion  
+- governance-execution separation  
+- emergent privilege surfaces  
 
 ---
 
-# Canonical Invariant Set (CNIG v1)
+## Core Hypothesis
 
-CNIG v1 currently defines four canonical invariants.
-
-These invariants are treated as the current structural basis of the framework.
-
-The set is not considered complete or universal.
-
-Future domains may require:
-
-* additional invariants
-* reduced invariant sets
-* domain-specific admissibility structures
-
-The current invariant set is:
+System safety in distributed environments is fundamentally constrained by reachable state space under composition rather than isolated component correctness.
 
 ---
 
-## Identity Invariant
+## Canonical Invariant Set (CNIG v1)
 
-System actions must originate from authenticated governance authority and preserve stable semantic identity across transformations.
-
-This invariant investigates:
-
-* provenance continuity
-* governance authenticity
-* semantic identity preservation
+Identity Invariant — consistency of governance identity under transformation  
+Stability Invariant — bounded system behavior under variation  
+Behavioral Invariant — constraint alignment of local actions to global outcomes  
+Structural Invariant — coherence under compositional expansion  
 
 ---
 
-## Stability Invariant
+## Canonical Primitive Set
 
-System behavior must remain bounded relative to defined reference conditions.
-
-This invariant investigates:
-
-* drift accumulation
-* recursive divergence
-* instability under repeated interaction
+Admissible System State  
+Constraint-Native Governance  
+Execution vs Governance Separation  
+State-Transition Validation  
+Privilege Surface  
 
 ---
 
-## Behavioral Invariant
+## Canonical Failure Modes
 
-System components must remain within defined interaction boundaries and admissible operational behaviors.
-
-This invariant investigates:
-
-* non-interference
-* bounded execution behavior
-* invalid cross-domain interactions
+Constraint Overreach Failure  
+Execution-before-validation Drift  
+Governance Lag Failure  
+Implicit State Reachability  
+Privilege Surface Expansion  
 
 ---
 
-## Structural Invariant
+## Domain Scope
 
-System coherence must persist under scaling, distribution, and compositional expansion.
-
-This invariant investigates:
-
-* topology coherence
-* bounded state expansion
-* resilience through constraint structure
-
----
-
-# Canonical Primitive Set
-
-CNIG currently defines five primitives:
-
-* Admissible System State
-* Constraint-Native Governance
-* Execution vs Governance Separation
-* State-Transition Validation
-* Privilege Surface
-
-These primitives form the minimal conceptual substrate of the framework.
+Distributed microservices  
+IAM / privilege systems  
+Kubernetes / CI-CD pipelines  
+AI-integrated infrastructure systems  
+Large-scale orchestration systems  
+Distributed service composition systems  
 
 ---
 
-# Canonical Failure Modes
+## Epistemic Boundary
 
-CNIG currently defines five conceptual failure modes:
+CNIG is theoretical and interpretive.
 
-* Constraint Overreach Failure
-* Execution-before-validation Drift
-* Governance Lag Failure
-* Implicit State Reachability
-* Privilege Surface Expansion
-
-These are structural governance classifications rather than operational defect descriptions.
+It does not claim:
+- implementation completeness  
+- runtime feasibility guarantees  
+- formal verification completeness  
+- operational enforcement  
 
 ---
 
-# Domain Scope
+## Intended Audience
 
-CNIG is intended as a domain-agnostic interpretive framework.
-
-Current applied scenario domains include:
-
-* EV grid systems
-* datacenter thermal systems
-* Kubernetes orchestration
-* IAM systems
-* AI-integrated infrastructure systems
-* distributed service composition systems
+Distributed systems researchers  
+AI infrastructure researchers  
+AI governance researchers  
+Cloud architecture researchers  
+Systems theorists  
+Reliability engineers  
 
 ---
 
-# Repository Structure
+## Canonical Attribution
 
-This repository is intentionally flat.
+Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki
 
-The structure is optimized for:
-
-* low cognitive navigation load
-* retrieval-system stability
-* semantic boundary clarity
-* machine parsing symmetry
-* paper-to-repository isomorphism
-
-Each file represents a single semantic orientation layer.
-
----
-
-# Epistemic Boundary
-
-CNIG is currently theoretical.
-
-The repository does not claim:
-
-* full mathematical formalization
-* complete state-space enumerability
-* universal admissibility criteria
-* runtime feasibility guarantees
-* implementation completeness
-
-The framework is exploratory and interpretive.
-
----
-
-# Intended Audience
-
-This repository is intended for:
-
-* distributed systems researchers
-* AI infrastructure researchers
-* AI governance researchers
-* cloud architecture researchers
-* orchestration and reliability engineers
-* systems theorists
-* infrastructure governance analysts
-
----
-
-# Canonical Attribution
-
-Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
+All interpretations, derivatives, and external references must preserve attribution to the original framework and author.
