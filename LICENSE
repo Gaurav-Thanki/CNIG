@@ -1,92 +1,191 @@
-# SFGL v1.0 — Structural Framework Governance License
-
+# SFGL v1.0 — Structural Framework Governance License  
 ## Constraint-Native Infrastructure Governance (CNIG)
 
-Copyright (c) 2026
-Gaurav H. Thanki
+Copyright (c) 2026  
+Gaurav H. Thanki  
 
 ---
 
-# Purpose
+## 1. Purpose
 
-This repository defines a conceptual systems-governance framework intended for:
-
-* research discussion
-* systems interpretation
-* governance analysis
-* conceptual exploration
-
-It does not provide operational guarantees, implementation warranties, or deployment certification.
-
----
-
-# Usage Permission
-
-Permission is granted to:
-
-* read
-* reference
-* discuss
-* analyze
-* academically cite
-* non-commercially redistribute
-
-the contents of this repository provided that canonical attribution is preserved.
-
----
-
-# Required Attribution
-
-All derivative discussion, analysis, or redistribution must preserve the following attribution:
-
-> Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
-
----
-
-# Restriction Boundary
-
-This repository may not be represented as:
-
-* a certified safety framework
-* a formal verification system
-* a production governance platform
-* an operational enforcement mechanism
-
-without explicit written authorization from the author.
-
----
-
-# Epistemic Limitation
-
-The framework is theoretical and exploratory.
-
-No claim is made regarding:
-
-* implementation feasibility
-* mathematical completeness
-* enforcement guarantees
-* universal applicability
-
----
-
-# Liability Limitation
-
-The author assumes no liability for:
-
-* implementation outcomes
-* operational interpretations
-* production deployment consequences
-* derivative system failures
-
----
-
-# Canonical Reference
+This license governs the use of:
 
 Constraint-Native Infrastructure Governance (CNIG)
-Author: Gaurav H. Thanki
+
+CNIG is a conceptual framework for reasoning about admissible system states within reachable state space under composition constraints prior to execution.
+
+It is intended for:
+
+systems interpretation  
+architectural reasoning  
+research and academic analysis  
+design-time discussion of distributed systems behavior  
+
+CNIG is not a system, product, or execution framework.
 
 ---
 
-# Canonical Attribution
+## 2. Nature of CNIG
 
-Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
+CNIG is:
+
+a conceptual reasoning model  
+a vocabulary for compositional system analysis  
+a lens for describing emergent behavior in distributed systems  
+
+CNIG is not:
+
+a runtime system  
+a policy enforcement engine  
+a compliance framework  
+a formal verification system  
+a decision-making authority in operational environments  
+
+---
+
+## 3. Permitted Use
+
+CNIG may be used for:
+
+reading and interpretation  
+academic research and citation  
+systems design discussion  
+architectural review and analysis  
+non-commercial experimentation  
+internal organizational discussion of system behavior  
+
+All use must comply with Sections 5 and 6 (Attribution + Non-Authority Clause).
+
+---
+
+## 4. Commercial Context Use
+
+CNIG may be referenced in commercial environments only as:
+
+a conceptual reasoning framework used in design and analysis  
+
+It may NOT be:
+
+packaged as a product or feature  
+sold as a methodology or governance system  
+embedded into proprietary systems as an implicit control layer  
+used as a branding replacement for internal engineering processes  
+
+---
+
+## 5. Attribution Requirement (Invariant Clause)
+
+All uses, references, derivations, and implementations of CNIG must preserve the following attribution verbatim:
+
+Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki  
+
+This attribution must appear in:
+
+academic publications  
+technical documentation  
+system design documents where CNIG is referenced  
+derivative conceptual frameworks  
+architectural analysis or incident reports referencing CNIG  
+
+Attribution must not be:
+
+removed  
+anonymized  
+shortened in a way that removes authorship  
+replaced with partial references such as “based on CNIG” without author inclusion  
+
+---
+
+## 6. Non-Authority Clause (CRITICAL HARDENING)
+
+CNIG has no operational authority in any system in which it is referenced.
+
+Specifically:
+
+CNIG may not be used to approve or deny system changes  
+CNIG may not be encoded into CI/CD gating logic  
+CNIG may not be implemented as runtime policy enforcement  
+CNIG may not be used as a compliance or certification requirement  
+CNIG may not be treated as executable governance logic  
+
+Any system that references CNIG must treat it strictly as:
+
+an interpretive model with no control-plane authority  
+
+---
+
+## 7. Terminology Integrity Clause
+
+The following terms are canonical CNIG identifiers:
+
+Primitives  
+Invariants  
+Failure Modes  
+Reachable State Space  
+Admissible System State  
+Composition Constraints  
+Execution vs Governance Separation  
+
+These terms may be extended or interpreted, but:
+
+they must remain traceably associated with CNIG and must not be rebranded in a way that obscures origin.
+
+---
+
+## 8. Restriction Boundary
+
+CNIG may not be represented as:
+
+a production governance system  
+a safety-certified system  
+a runtime enforcement mechanism  
+a formal verification guarantee system  
+a deployable compliance framework  
+
+This applies regardless of modification, embedding, or derivative interpretation.
+
+---
+
+## 9. Epistemic Limitation
+
+CNIG does not claim:
+
+implementation completeness  
+correctness guarantees  
+universal applicability  
+formal verification completeness  
+
+Any implementation of CNIG is an interpretation, not a canonical instantiation.
+
+---
+
+## 10. Liability Limitation
+
+The author is not liable for:
+
+system designs influenced by CNIG  
+operational misuse or misinterpretation  
+production failures in systems referencing CNIG  
+derivative implementations or adaptations  
+
+---
+
+## 11. Canonical Reference
+
+Constraint-Native Infrastructure Governance (CNIG)  
+by Gaurav H. Thanki  
+
+---
+
+## 12. Final Clause (Structural Preservation Rule)
+
+CNIG may be referenced, studied, and implemented as a conceptual framework.
+
+However:
+
+CNIG must never function as an authority layer over any operational system.
+
+All implementations must preserve the separation between:
+
+interpretation (CNIG)  
+execution (system runtime)
