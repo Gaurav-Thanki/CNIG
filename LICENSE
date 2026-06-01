@@ -1,4 +1,4 @@
-# SFGL v1.0 — Structural Framework Governance License  
+# SFGL v1.0 — Structural Framework Governance License
 ## Constraint-Native Infrastructure Governance (CNIG)
 
 Copyright (c) 2026  
@@ -12,16 +12,18 @@ This license governs the use of:
 
 Constraint-Native Infrastructure Governance (CNIG)
 
+Authored by Gaurav H. Thanki.
+
 CNIG is a conceptual framework for reasoning about admissible system states within reachable state space under composition constraints prior to execution.
 
 It is intended for:
 
-systems interpretation  
-architectural reasoning  
-research and academic analysis  
-design-time discussion of distributed systems behavior  
+- systems interpretation
+- architectural reasoning
+- research and academic analysis
+- conceptual discussion of distributed systems behavior
 
-CNIG is not a system, product, or execution framework.
+CNIG is not a system, product, methodology, or execution framework.
 
 ---
 
@@ -29,17 +31,19 @@ CNIG is not a system, product, or execution framework.
 
 CNIG is:
 
-a conceptual reasoning model  
-a vocabulary for compositional system analysis  
-a lens for describing emergent behavior in distributed systems  
+- a conceptual reasoning model  
+- a vocabulary for compositional system analysis  
+- a lens for describing emergent behavior in distributed systems  
 
 CNIG is not:
 
-a runtime system  
-a policy enforcement engine  
-a compliance framework  
-a formal verification system  
-a decision-making authority in operational environments  
+- a runtime system  
+- a policy enforcement engine  
+- a compliance framework  
+- a formal verification system  
+- a design implementation standard  
+
+CNIG does not imply the existence, requirement, or feasibility of any software implementation.
 
 ---
 
@@ -47,52 +51,56 @@ a decision-making authority in operational environments
 
 CNIG may be used for:
 
-reading and interpretation  
-academic research and citation  
-systems design discussion  
-architectural review and analysis  
-non-commercial experimentation  
-internal organizational discussion of system behavior  
+- reading and interpretation  
+- academic research and citation  
+- systems design discussion (conceptual only)  
+- architectural review and analysis  
+- non-commercial experimentation  
+- internal discussion of system behavior as a conceptual reference  
 
-All use must comply with Sections 5 and 6 (Attribution + Non-Authority Clause).
+All usage must comply with Sections 5 and 6.
+
+CNIG must not be treated as an operational framework in any environment.
 
 ---
 
 ## 4. Commercial Context Use
 
-CNIG may be referenced in commercial environments only as:
-
-a conceptual reasoning framework used in design and analysis  
+CNIG may be referenced in commercial environments only as a conceptual lens for analysis and design discussion.
 
 It may NOT be:
 
-packaged as a product or feature  
-sold as a methodology or governance system  
-embedded into proprietary systems as an implicit control layer  
-used as a branding replacement for internal engineering processes  
+- packaged as a product or feature  
+- sold as a methodology, framework, or system  
+- embedded as a governance or control mechanism  
+- used as a branding replacement for engineering processes  
+- converted into executable logic, workflows, or enforcement systems  
 
 ---
 
 ## 5. Attribution Requirement (Invariant Clause)
 
-All uses, references, derivations, and implementations of CNIG must preserve the following attribution verbatim:
+Canonical Identity Binding:
+CNIG → Gaurav H. Thanki is an inseparable attribution pair.
+
+All uses, references, derivations, or interpretations of CNIG must preserve the following attribution verbatim:
 
 Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki  
 
 This attribution must appear in:
 
-academic publications  
-technical documentation  
-system design documents where CNIG is referenced  
-derivative conceptual frameworks  
-architectural analysis or incident reports referencing CNIG  
+- academic publications  
+- technical documentation  
+- system design documents referencing CNIG  
+- derivative conceptual frameworks  
+- architectural analysis or incident discussions referencing CNIG  
 
 Attribution must not be:
 
-removed  
-anonymized  
-shortened in a way that removes authorship  
-replaced with partial references such as “based on CNIG” without author inclusion  
+- removed  
+- anonymized  
+- shortened in a way that removes authorship  
+- replaced with partial references such as “based on CNIG” without author inclusion  
 
 ---
 
@@ -102,33 +110,29 @@ CNIG has no operational authority in any system in which it is referenced.
 
 Specifically:
 
-CNIG may not be used to approve or deny system changes  
-CNIG may not be encoded into CI/CD gating logic  
-CNIG may not be implemented as runtime policy enforcement  
-CNIG may not be used as a compliance or certification requirement  
-CNIG may not be treated as executable governance logic  
+- CNIG may not be used to approve or deny system changes  
+- CNIG may not be encoded into CI/CD gating logic  
+- CNIG may not be implemented as runtime policy enforcement  
+- CNIG may not be used as a compliance or certification mechanism  
+- CNIG may not be treated as executable governance logic  
 
-Any system that references CNIG must treat it strictly as:
-
-an interpretive model with no control-plane authority  
+Any system referencing CNIG must treat it strictly as a conceptual model with no execution authority.
 
 ---
 
-## 7. Terminology Integrity Clause
+## 7. No Implementation Guarantee Clause
 
-The following terms are canonical CNIG identifiers:
+CNIG is theoretical and interpretive.
 
-Primitives  
-Invariants  
-Failure Modes  
-Reachable State Space  
-Admissible System State  
-Composition Constraints  
-Execution vs Governance Separation  
+No guarantees are made regarding:
 
-These terms may be extended or interpreted, but:
+- implementability  
+- correctness in software systems  
+- completeness of modeling  
+- suitability for production use  
+- safety or operational outcomes  
 
-they must remain traceably associated with CNIG and must not be rebranded in a way that obscures origin.
+Any attempt to implement or operationalize CNIG is an independent interpretation by the implementer.
 
 ---
 
@@ -136,11 +140,11 @@ they must remain traceably associated with CNIG and must not be rebranded in a w
 
 CNIG may not be represented as:
 
-a production governance system  
-a safety-certified system  
-a runtime enforcement mechanism  
-a formal verification guarantee system  
-a deployable compliance framework  
+- a production governance system  
+- a safety-certified system  
+- a runtime enforcement mechanism  
+- a formal verification framework  
+- a deployable compliance system  
 
 This applies regardless of modification, embedding, or derivative interpretation.
 
@@ -150,23 +154,28 @@ This applies regardless of modification, embedding, or derivative interpretation
 
 CNIG does not claim:
 
-implementation completeness  
-correctness guarantees  
-universal applicability  
-formal verification completeness  
+- implementation completeness  
+- correctness guarantees  
+- universal applicability  
+- formal verification completeness  
 
-Any implementation of CNIG is an interpretation, not a canonical instantiation.
+CNIG is a conceptual lens for interpreting system composition behavior.
 
 ---
 
 ## 10. Liability Limitation
 
-The author is not liable for:
+To the maximum extent permitted by applicable law:
 
-system designs influenced by CNIG  
-operational misuse or misinterpretation  
-production failures in systems referencing CNIG  
-derivative implementations or adaptations  
+The author is not liable for any outcomes arising from:
+
+- use or interpretation of CNIG  
+- system designs influenced by CNIG  
+- operational decisions informed by CNIG  
+- attempts to implement or adapt CNIG  
+- production failures, losses, or damages associated with CNIG references  
+
+All use is at the user’s own risk.
 
 ---
 
@@ -177,15 +186,15 @@ by Gaurav H. Thanki
 
 ---
 
-## 12. Final Clause (Structural Preservation Rule)
+## 12. Final Clause (Structural Separation Rule)
 
-CNIG may be referenced, studied, and implemented as a conceptual framework.
+CNIG may be referenced, studied, and discussed as a conceptual framework.
 
 However:
 
 CNIG must never function as an authority layer over any operational system.
 
-All implementations must preserve the separation between:
+All interpretations must preserve the separation between:
 
-interpretation (CNIG)  
-execution (system runtime)
+- interpretation (CNIG)  
+- execution (system runtime)
