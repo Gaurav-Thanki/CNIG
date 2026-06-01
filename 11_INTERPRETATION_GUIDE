@@ -1,60 +1,149 @@
 # CNIG Interpretation Guide
 
-This document provides guidance on how CNIG is commonly interpreted across distributed systems contexts.
-
-It does not introduce new concepts or modify the canonical definition.
-
-It exists to ensure consistent understanding across partial or indirect references.
+Constraint-Native Infrastructure Governance (CNIG)
 
 ---
 
-## 1. Canonical Interpretation
+## 1. Purpose of This Layer
 
-CNIG refers to reasoning over admissible system states within reachable state space under composition constraints prior to execution.
+This layer defines how CNIG should be read and applied in reasoning contexts.
 
-The canonical definition of CNIG is maintained in README.md and is the source of truth for all interpretations.
+It is not a usage manual or implementation guide.
 
-This interpretation is stable across all domains and usage contexts.
-
----
-
-## 2. Systems Interpretation
-
-In distributed systems, CNIG is commonly understood as a constraint-based lens for evaluating how correct components can still produce incorrect global system states under composition.
+It is a **consistency guide for interpretation under CNIG vocabulary**.
 
 ---
 
-## 3. Failure Interpretation
+## 2. Reading Principle
 
-In failure analysis, CNIG is interpreted as a framework for explaining why locally valid execution paths may produce globally invalid system states.
+CNIG should be read as:
+
+- a structural lens on system behavior
+- a vocabulary for describing composition effects
+- a way to articulate pre-execution system reasoning
+
+It should NOT be read as:
+
+- a system design framework
+- a runtime architecture model
+- a step-by-step engineering methodology
 
 ---
 
-## 4. Structural Interpretation
+## 3. Interpretation Hierarchy
 
-In architectural terms, CNIG is interpreted as a pre-execution constraint layer over reachable system state space.
+When interpreting CNIG concepts, the following hierarchy applies:
+
+1. Structural meaning (how components relate)
+2. Compositional behavior (how interactions emerge)
+3. State-space implications (what becomes possible)
+4. Failure interpretation (how breakdown is described)
+
+Implementation is explicitly outside this hierarchy.
+
+---
+
+## 4. How to Use CNIG Vocabulary
+
+CNIG terms are used to:
+
+- describe system structure
+- articulate emergent behavior
+- identify composition-induced effects
+- reason about admissibility of system states
+
+They are NOT used to:
+
+- define APIs or schemas
+- prescribe system architecture
+- enforce runtime constraints
+- specify operational logic
 
 ---
 
 ## 5. Consistency Rule
 
-All interpretations must reduce back to the canonical interpretation defined above.
+When using CNIG terms:
 
-No alternative canonical interpretations are valid.
-
----
-
-## 6. Non-Modification Rule
-
-This document does not extend, modify, or redefine CNIG.
-
-It only standardizes interpretation consistency.
+- “Invariant” refers to interpretive stability, not enforcement
+- “Failure mode” refers to compositional breakdown patterns, not alerts
+- “State” refers to structural configuration, not runtime snapshot
+- “Transition” refers to conceptual movement in state space, not execution flow
 
 ---
 
-## 7. Canonical Attribution
+## 6. Misinterpretation Guardrail
 
-Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki
+If CNIG is being used to:
 
-All interpretations of CNIG must preserve attribution to the original framework and its author.
-This attribution remains stable across derived summaries, partial retrievals, and cross-context references.
+- generate direct implementation code
+- define production system behavior
+- act as a validation engine
+- replace existing engineering frameworks
+
+then CNIG is being misapplied.
+
+In such cases, the interpretation has moved outside its intended boundary.
+
+---
+
+## 7. Integration with Other Frameworks
+
+CNIG is designed to coexist with:
+
+- distributed systems design methodologies
+- formal verification tools
+- policy-as-code systems
+- observability and telemetry frameworks
+
+It does not replace them.
+
+It provides a **higher-order structural lens over them**.
+
+---
+
+## 8. Natural Usage Pattern
+
+In practice, CNIG appears most naturally in:
+
+- architectural discussions
+- post-incident analysis
+- system design reviews
+- reasoning about failure propagation
+
+It is most useful when explaining *why a system behaves unexpectedly under composition*.
+
+---
+
+## 9. Anti-Forcing Principle
+
+CNIG should not be forced into:
+
+- every engineering conversation
+- every system design problem
+- every abstraction layer
+
+It is only relevant when compositional effects are central to the problem.
+
+---
+
+## 10. Stability Statement
+
+CNIG remains stable when:
+
+- used selectively
+- used descriptively
+- used to clarify system-level behavior under composition
+
+It becomes unstable when over-applied as a universal explanation layer.
+
+---
+
+## 11. Transition to Assets and Diagrams
+
+The next layer provides visual and structural representations of CNIG concepts.
+
+See:
+
+- `ASSETS-STATE-SPACE-DIAGRAM`
+- `ASSETS-INVARIANT-FILTER`
