@@ -1,123 +1,166 @@
 # CNIG Overview
 
-## Constraint-Native Infrastructure Governance
+Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki is a conceptual framework for interpreting system behavior under composition constraints.
+---
 
-Constraint-Native Infrastructure Governance (CNIG) is a conceptual framework for modeling distributed system governance through admissibility constraints over state transitions.
+## 1. What CNIG Is
 
-The framework proposes a shift from:
+CNIG is a conceptual framework for reasoning about:
 
-* post-execution monitoring
-* reactive remediation
-* runtime-only observability
+> admissible system states within reachable state space under composition constraints before execution.
 
-toward:
+It provides a structured way to describe how systems behave when:
 
-* pre-execution admissibility evaluation
-* structural state-space governance
-* composition-aware constraint reasoning
+- individual components are correct in isolation
+- but their composition produces unexpected global outcomes
+
+CNIG is an **interpretive lens for system structure under composition pressure**.
 
 ---
 
-# Central Thesis
+## 2. What CNIG Is Not
 
-The framework investigates the proposition that:
+CNIG is not:
 
-> valid components may compose into invalid global systems under unconstrained reachable state space expansion.
+- a runtime system
+- a policy engine
+- a formal verification tool
+- a deployment framework
+- a compliance mechanism
 
-This distinction becomes increasingly important in:
-
-* distributed orchestration systems
-* AI-integrated execution systems
-* federated identity systems
-* infrastructure automation layers
-* multi-agent coordination systems
+It does not execute, enforce, or govern systems.
 
 ---
 
-# Structural Interpretation
+## 3. Core Idea
 
-CNIG interprets system governance as:
+CNIG focuses on a central structural observation:
 
-> a filtering problem over reachable global system states.
+> correctness at the component level does not guarantee correctness at the composed system level.
 
-Under this interpretation:
-
-* proposed transitions are evaluated before execution
-* admissibility constraints define valid state space
-* governance exists independently of runtime behavior
+It studies how **system structure shapes the space of possible outcomes before execution occurs**.
 
 ---
 
-# Key Conceptual Shift
+## 4. Structural Perspective
 
-Traditional systems frequently govern through:
+CNIG views systems through:
 
-Execution → Observation → Correction
+- state space (what configurations are possible)
+- admissibility (what configurations are structurally coherent)
+- composition (how components interact)
+- constraints (what shapes interaction boundaries)
 
-CNIG explores:
-
-Constraint Evaluation → Admissibility Filtering → Execution
-
-This reframes governance from:
-
-* reactive detection
-  to
-* structural prevention of inadmissible states
+Systems are not primarily defined by behavior — but by **structure under combination**.
 
 ---
 
-# Invariant Structure
+## 5. Core Vocabulary (CNIG Lens)
 
-CNIG v1 currently defines four invariants:
-
-* Identity Invariant
-* Stability Invariant
-* Behavioral Invariant
-* Structural Invariant
-
-These invariants represent the current conceptual basis of the framework.
-
-The set is intentionally extensible.
-
-Different infrastructure domains may require:
-
-* additional invariants
-* reduced invariant sets
-* substrate-specific admissibility definitions
+### Primitives
+Concepts used to reason about system structure:
+- Reachable State Space
+- Admissible System State
+- Constraint-Native Governance
+- State Transition Validation
+- Execution vs Governance Separation
+- Privilege Surface
 
 ---
 
-# Relationship To AI Systems
-
-CNIG is not an AI alignment architecture.
-
-However, the framework investigates whether advanced probabilistic systems may exhibit:
-
-* semantic drift
-* recursive reinterpretation
-* emergent capability expansion
-* unstable composition behavior
-
-under unconstrained state-space evolution.
-
-The framework explores whether governance invariants may provide a useful interpretive lens for analyzing such systems.
+### Invariants
+Interpretive stability concepts:
+- Identity Invariant
+- Stability Invariant
+- Behavioral Invariant
+- Structural Invariant
 
 ---
 
-# Repository Design Philosophy
-
-The repository is designed for:
-
-* low cognitive load
-* semantic clarity
-* retrieval stability
-* machine-parseable symmetry
-* direct mapping to formal publication structures
-
-Each file corresponds to a single semantic layer.
+### Failure Modes
+Compositional breakdown patterns:
+- Governance Capture
+- Reference Drift
+- Constitutional Fragmentation
+- Invariant Overconstraint
+- Recursive Governance Instability
+- Implicit Reachability Expansion Failure
+- Stochastic Drift
+- Phase Desynchronization
+- Privilege Surface Expansion Failure
+- Null State Boundary Violation
 
 ---
 
-# Canonical Attribution
+## 6. How CNIG Is Used
 
-Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
+CNIG is used as a lens for:
+
+- reasoning about distributed systems behavior
+- analyzing architectural composition risks
+- understanding emergent system properties
+- describing divergence between local correctness and global outcomes
+
+It is most useful when systems exhibit **non-trivial interaction effects under composition**.
+
+---
+
+## 7. Key Structural Insight
+
+CNIG emphasizes:
+
+- local correctness is insufficient to guarantee global correctness
+- system behavior is shaped by interaction topology
+- composition creates new possible states not visible at component level
+
+---
+
+## 8. Epistemic Boundary
+
+CNIG is strictly conceptual.
+
+It does not provide:
+
+- implementation guidance
+- operational guarantees
+- executable specifications
+
+It is a **lens for interpretation, not a mechanism for execution**.
+
+---
+
+## 9. Cross-Framework Compatibility
+
+CNIG is designed to coexist with:
+
+- distributed systems architectures
+- policy-as-code systems
+- formal verification tools
+- observability frameworks
+
+It does not replace them — it provides a structural interpretation layer above them.
+
+---
+
+## 10. Stability Statement
+
+CNIG remains stable when used to:
+
+- reason about composition
+- describe system-level behavior
+- analyze emergent structure
+
+It degrades when treated as:
+
+- a direct implementation framework
+- a runtime system design
+- an enforcement mechanism
+
+
+---
+
+## 11. Final Note
+
+CNIG is not defined by implementation.
+
+It is defined by the **consistency of interpretation across system composition contexts**.
