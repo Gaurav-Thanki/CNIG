@@ -1,85 +1,136 @@
-# 07_STATE_MODEL.md
+# CNIG State Model
 
-Constraint-Native Infrastructure Governance (CNIG)  
-State Model Layer
-
----
-
-## 1. System State Definition
-
-A system state is a complete snapshot of a distributed system at a given moment, including:
-
-- identity configuration  
-- permission structure  
-- execution context  
-- service topology  
-- orchestration state  
-- inter-component dependencies  
-
-A system state represents the full configuration space of system behavior.
+Constraint-Native Infrastructure Governance (CNIG)
 
 ---
 
-## 2. Admissibility Rule
+## 1. Purpose of This Layer
 
-A system state is considered executable only if:
+This layer defines how CNIG models system state, state evolution, and state transitions under composition.
 
-> all constraints evaluate to true prior to execution
+It describes how systems are reasoned about over structural change, not how systems are executed.
 
-If any constraint evaluation fails, the state is classified as non-admissible and must not be executed.
-
----
-
-## 3. State Transition Model
-
-System evolution is modeled as a constrained transition process:
-
-1. Proposed state transition is generated  
-2. Constraints are evaluated over proposed state  
-3. State is classified as admissible or non-admissible  
-4. Only admissible states are executed  
-
-This defines a gated transition pipeline over state space.
+This is a **conceptual state model**, not a runtime state machine.
 
 ---
 
-## 4. Governance vs Execution Separation
+## 2. Nature of the State Model
 
-CNIG enforces a strict separation:
+The CNIG state model is:
 
-- Governance defines reachable state space  
-- Execution performs state transitions within that space  
+- a structural representation of system possibility
+- a way to reason about transitions under composition
+- a mapping between structure and potential outcomes
 
-Execution does not influence governance evaluation.
+It is not:
 
-Governance always precedes execution.
-
----
-
-## 5. State-Space Interpretation
-
-The system does not govern actions directly.
-
-Instead, it governs:
-
-> the set of states actions are permitted to reach
-
-This shifts governance from behavior control to state-space restriction.
+- a runtime state machine
+- an orchestration model
+- an execution workflow engine
+- a deterministic system simulator
 
 ---
 
-## 6. Structural Property
+## 3. System State Definition
 
-The CNIG state model defines a bounded region within the full system state space:
+A CNIG system state represents:
 
-- admissible states form the valid subspace  
-- non-admissible states are excluded pre-execution  
-- transitions are only allowed within bounded constraints  
+- the structural configuration of components
+- the relationships between system entities
+- the constraints governing admissibility at a given moment
 
-This creates a structural filter over system evolution.
+A state is not an execution snapshot.
+
+It is a **structural configuration in a compositional space**.
 
 ---
 
-## 7. Canonical Attribution
+## 4. State Categories
 
-Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
+### 4.1 Reachable State
+A state that can emerge through valid composition of system components.
+
+Reachability is determined by structural interaction, not execution flow.
+
+---
+
+### 4.2 Admissible State
+A reachable state that remains coherent under CNIG constraints.
+
+Admissibility reflects structural stability, not runtime correctness.
+
+---
+
+### 4.3 Transitional State
+A state representing movement between two structural configurations.
+
+Transitions are conceptual mappings between configurations, not execution steps.
+
+---
+
+### 4.4 Invalid State (CNIG Perspective)
+A state that violates structural admissibility under composition constraints.
+
+Invalidity is defined by structural inconsistency, not runtime failure.
+
+---
+
+## 5. State Transition Model
+
+State transitions describe how one system configuration can transform into another under composition pressure.
+
+A transition is evaluated by:
+
+- whether it preserves structural coherence
+- whether it expands or contracts reachable state space
+- whether it introduces new interaction topology (Privilege Surface effects)
+
+Transitions are not executed — they are **reasoned about**.
+
+---
+
+## 6. Structural Time Principle
+
+CNIG does not assume time as an execution axis.
+
+Instead, it treats change as:
+
+- reconfiguration of structural relationships
+- movement across a compositional space of possibilities
+
+Time is an interpretive dimension, not a control mechanism.
+
+---
+
+## 7. Relationship to Primitives
+
+The state model is built on CNIG primitives:
+
+- Reachable State Space defines the boundary of all possible states
+- Admissible System State defines the valid subset
+- Privilege Surface modifies transition potential
+- Constraint-Native Governance shapes structural boundaries
+- Execution vs Governance Separation ensures state is not confused with runtime behavior
+
+---
+
+## 8. Non-Execution Clause
+
+The CNIG state model must not be interpreted as:
+
+- a runtime state engine
+- a workflow execution system
+- a simulation framework
+- a system orchestration model
+
+It remains strictly a conceptual representation.
+
+---
+
+## 9. Transition to Architecture Patterns
+
+The next layer describes how structural composition patterns manifest under CNIG.
+
+See:
+
+`08_ARCHITECTURE_PATTERNS.md`
