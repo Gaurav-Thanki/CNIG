@@ -1,106 +1,140 @@
-# 06_DECISION_TEMPLATES.md
+# CNIG Decision Templates
 
-Constraint-Native Infrastructure Governance (CNIG)  
-Decision Templates Layer
-
----
-
-## 1. AI System Governance Approval Template
-
-Used to evaluate whether AI-driven actions are admissible before execution.
-
-### Context
-This system or workflow is evaluated under CNIG constraints where all actions must be validated prior to execution.
-
-### Evaluation Criteria
-
-- Are all proposed state transitions explicitly defined?  
-- Has constraint evaluation been completed prior to execution?  
-- Does the action remain within admissible system state space?  
-- Is the privilege surface fully bounded and understood?  
-
-### Risk Review
-
-- Privilege surface expansion risk  
-- Execution-before-validation drift risk  
-- Implicit state reachability risk  
-- Governance lag failure risk  
-
-### Decision Output
-
-- Approved  
-- Approved with constraints  
-- Rejected  
+Constraint-Native Infrastructure Governance (CNIG)
 
 ---
 
-## 2. Architecture Review Decision Template
+## 1. Purpose of This Layer
 
-Used for evaluating system design under CNIG structural rules.
+This layer defines structured decision reasoning templates under the CNIG framework.
 
-### Context
-Architecture is evaluated based on admissible system state modeling and constraint-based governance separation.
+These templates are used to support **architectural reasoning and evaluation**, not to make automated or enforced decisions.
 
-### Evaluation Criteria
-
-- Are system state transitions explicitly modeled?  
-- Is governance separated from execution logic?  
-- Are admissible system states clearly defined?  
-- Are failure domains identified and bounded?  
-
-### Structural Risk Review
-
-- Composition failure risk  
-- Privilege surface expansion risk  
-- Implicit state reachability risk  
-
-### Decision Output
-
-- Approved  
-- Approved with constraints  
-- Rejected  
+They provide a consistent structure for thinking about system choices through CNIG primitives and failure modes.
 
 ---
 
-## 3. System Governance Evaluation Template
+## 2. Nature of Decision Templates
 
-Used to evaluate compliance of a system with CNIG constraints.
+CNIG decision templates are:
 
-### Evaluation Criteria
+- structured reasoning patterns
+- comparative evaluation lenses
+- pre-execution design reflection formats
 
-- Are all state transitions validated before execution?  
-- Is governance strictly separated from execution runtime?  
-- Are admissible system states clearly bounded?  
-- Are failure modes explicitly accounted for?  
+They are not:
 
-### Failure Mode Screening
-
-- Execution-before-validation drift  
-- Governance lag failure  
-- Implicit state reachability  
-- Constraint overreach failure  
-- Privilege surface expansion  
-
-### Decision Output
-
-- System is compliant  
-- System is non-compliant  
-- Requires redesign under CNIG constraints  
+- approval workflows
+- policy enforcement logic
+- CI/CD decision gates
+- automated governance systems
 
 ---
 
-## 4. Structural Interpretation
+## 3. Core Decision Template Structure
 
-Decision templates in CNIG are not procedural artifacts.
-
-They define:
-
-> structured governance evaluation grammars over proposed system states
-
-They act as formalized decision filters, not operational workflows.
+All CNIG-based decisions can be framed using the following structure:
 
 ---
 
-## 5. Canonical Attribution
+### 3.1 Context Definition
 
-Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
+- What system is being evaluated?
+- What components participate in composition?
+- What is the relevant structural boundary?
+
+Focus: **system composition context**
+
+---
+
+### 3.2 Structural Question
+
+- What does system composition change about reachable state space?
+- What new interactions are introduced?
+- What assumptions about admissibility are being made?
+
+Focus: **structure, not implementation**
+
+---
+
+### 3.3 CNIG Lens Mapping
+
+Map the situation against CNIG primitives:
+
+- Reachable State Space: What becomes possible?
+- Admissible System State: What remains structurally valid?
+- Privilege Surface: How does interaction topology change?
+- Constraint-Native Governance: What constraints shape outcomes?
+- Execution vs Governance Separation: What is local vs global behavior?
+
+---
+
+### 3.4 Failure Mode Sensitivity Check
+
+Identify potential structural risks:
+
+- Does this introduce Reference Drift?
+- Could this lead to Constitutional Fragmentation?
+- Does composition risk Privilege Surface Expansion Failure?
+- Are invariants at risk of Overconstraint?
+
+Focus: **emergent structural instability**
+
+---
+
+### 3.5 Interpretation Outcome
+
+Summarize the decision as:
+
+- structurally safe (under CNIG interpretation)
+- structurally sensitive (requires caution in composition)
+- structurally unstable (high risk of compositional failure patterns)
+
+This is a reasoning classification, not an operational verdict.
+
+---
+
+## 4. Decision Principle
+
+CNIG does not choose between options.
+
+It describes how each option reshapes system structure under composition.
+
+Decision-making remains external to CNIG.
+
+---
+
+## 5. Non-Authority Clause
+
+These templates must not be used as:
+
+- automated approval systems
+- compliance enforcement logic
+- production gating mechanisms
+- runtime decision engines
+
+Any such usage is outside CNIG scope.
+
+---
+
+## 6. Relationship to CNIG Core
+
+Decision templates depend on:
+
+- primitives (structural vocabulary)
+- invariants (stability constraints)
+- failure modes (deviation patterns)
+
+They do not modify or extend them.
+
+They provide structured interpretive pathways through them.
+
+---
+
+## 7. Transition to State Model Layer
+
+The next layer formalizes how CNIG describes system state evolution and transitions.
+
+See:
+
+`07_STATE_MODEL.md`
