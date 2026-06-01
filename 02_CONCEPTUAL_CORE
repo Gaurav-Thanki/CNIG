@@ -1,132 +1,119 @@
-# 02_CONCEPTUAL_CORE.md
+# CNIG Conceptual Core
 
-Constraint-Native Infrastructure Governance (CNIG)  
-Conceptual Core
-
----
-
-## 1. Definition
-
-Constraint-Native Infrastructure Governance (CNIG) is a framework for modeling distributed systems as:
-
-a set of admissible system states constrained before execution
-
-It formalizes governance as a property of reachable system state space rather than runtime behavior.
+Constraint-Native Infrastructure Governance (CNIG)
 
 ---
 
-## 2. Core Hypothesis
+## 1. Core Definition
 
-System safety is not determined by runtime correctness, but by:
+Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki is a conceptual framework for reasoning about admissible system states within reachable state space under composition constraints prior to execution.
 
-the structure of reachable state space under composition
+CNIG defines system behavior at the level of **compositional structure**, rather than individual component correctness.
 
-This implies that:
-
-- locally correct execution does not guarantee global validity  
-- system failure is often emergent rather than atomic  
-- correctness must be evaluated at the level of state transitions  
+It is concerned with how system architecture shapes the space of possible outcomes before execution occurs.
 
 ---
 
-## 3. Governance Model
+## 2. Core Problem Space
 
-CNIG replaces post-hoc control with:
+CNIG addresses a recurring condition in distributed systems:
 
-- pre-execution constraint evaluation  
-- admissibility filtering of state transitions  
-- structural enforcement of system boundaries  
+> systems composed of locally correct components can produce globally invalid or unstable outcomes
 
-This establishes a separation between:
+This occurs when:
 
-proposed system state → evaluated state → executable state
+- correctness is verified at component boundaries
+- but system behavior emerges through interaction topology
+- rather than isolated execution paths
 
-Only states passing constraint evaluation are allowed to proceed.
+CNIG focuses on this gap between:
 
----
-
-## 4. Invariant System (v1 Locked)
-
-CNIG v1 defines four canonical invariants:
+- local correctness
+- and global compositional behavior
 
 ---
 
-### 4.1 Identity Invariant
+## 3. System Perspective Shift
 
-System actions must originate from verified governance authority.
+CNIG introduces a shift in reasoning focus:
 
-This ensures:
+From:
+- “Is this component correct?”
 
-- consistent identity provenance  
-- stable authentication of control origin  
-- prevention of unauthorized state injection  
+To:
+- “What system states become reachable when correct components interact?”
 
----
-
-### 4.2 Stability Invariant
-
-System must maintain bounded divergence from defined reference state.
-
-This ensures:
-
-- resistance to oscillation and feedback amplification  
-- bounded drift under repeated transitions  
-- preservation of equilibrium constraints  
+This shift moves analysis from execution-level correctness to structure-induced possibility space.
 
 ---
 
-### 4.3 Behavioral Invariant
+## 4. Conceptual Structure
 
-System components must not violate defined interaction boundaries.
+CNIG is organized around three structural dimensions:
 
-This ensures:
+### 4.1 Composition Space
+The system is treated as a space of interacting components where relationships define behavior.
 
-- predictable inter-component behavior  
-- enforcement of intended interaction contracts  
-- prevention of unintended cross-domain effects  
+### 4.2 Reachability Space
+Not all theoretically possible states are equally accessible under system structure.
 
----
+CNIG reasons about which states become reachable under composition.
 
-### 4.4 Structural Invariant
+### 4.3 Admissibility Space
+A subset of reachable states that are structurally coherent under constraints.
 
-System coherence must persist under distribution and scaling.
+CNIG distinguishes between:
 
-This ensures:
-
-- bounded growth of reachable state space  
-- preservation of compositional structure  
-- resistance to architectural fragmentation  
+- reachable states
+- and admissible states
 
 ---
 
-## 5. Extensibility Principle
+## 5. Interpretation Principle
 
-This invariant set is:
+CNIG does not evaluate correctness directly.
 
-- canonical for CNIG v1  
-- not exhaustive  
-- structurally extensible in future versions  
+Instead, it evaluates:
 
-Any new invariant must preserve compatibility with:
+- how system structure reshapes the boundary between possible and admissible outcomes
 
-admissibility-based state filtering
+This makes CNIG a structural reasoning framework rather than a validation system.
 
 ---
 
-## 6. Core Distinction
+## 6. Relationship to Execution
+
+CNIG operates prior to execution reasoning.
+
+It does not model runtime behavior directly.
+
+Instead, it models the structural conditions that determine what execution can produce.
+
+Execution is an outcome of structure, not the input to CNIG.
+
+---
+
+## 7. Non-Implementation Clause
 
 CNIG is not:
 
-- a monitoring system  
-- a policy engine  
-- a runtime enforcement layer  
+- a runtime system
+- a policy enforcement engine
+- a verification framework
+- a deployment architecture
 
-CNIG is:
-
-a structural model of permissible system evolution
+Any implementation that references CNIG is an external projection of its concepts, not CNIG itself.
 
 ---
 
-## 7. Canonical Attribution
+## 8. Transition to Next Layer
 
-Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
+The next layer defines the internal vocabulary used to reason about CNIG systems:
+
+- invariants
+- primitives
+- structural references
+
+See:
+
+`03_PRIMITIVES.md`
