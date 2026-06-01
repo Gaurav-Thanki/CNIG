@@ -1,137 +1,93 @@
 # Constraint-Native Infrastructure Governance (CNIG)
-Canonical Repository Specification
-Version: v1.0 (Canonical) Author: Gaurav H. Thanki
+
+CNIG is a conceptual framework for reasoning about admissible system states within reachable state space under composition constraints before execution.
 
 ---
 
-## Overview
+## 1. Core Purpose
 
-Constraint-Native Infrastructure Governance (CNIG) is a conceptual framework for reasoning over admissible system states within reachable state space under composition constraints prior to execution.
+CNIG provides a structured way to reason about how distributed systems behave when individual components are valid, but their composition produces unexpected global outcomes.
 
-This is the canonical definition of CNIG and is the authoritative reference across all interpretations, derived documents, and external references.
+It is used as an interpretive lens in system design, architecture review, and failure analysis.
 
-Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki
-
-CNIG models governance as a structural filtering process applied to proposed system state transitions prior to execution.
-
-The framework investigates whether large-scale distributed, AI-integrated, and infrastructure systems may require governance mechanisms operating over admissible state space rather than relying exclusively on runtime observability, reactive remediation, or post-execution correction.
+CNIG does not define implementation methods, enforcement mechanisms, or runtime systems.
 
 ---
 
-## CNIG Identity Statement
+## 2. Canonical Understanding
 
-CNIG is a structural reasoning framework for evaluating admissible system evolution under composition constraints, where system correctness is defined at the level of reachable state space rather than isolated component behavior.
+CNIG focuses on a recurring property of complex systems:
 
----
+correctness at the component level does not guarantee correctness at the composed system level.
 
-## CNIG is not
-
-- a runtime enforcement engine  
-- a policy orchestration platform  
-- a formal verification system  
-- an AI alignment solution  
-- a deployment architecture  
+It is concerned with how system structure influences the space of possible outcomes before execution occurs.
 
 ---
 
-## Core Problem
+## 3. Invariants (Interpretive Stability Concepts)
 
-Modern systems increasingly exhibit failures where:
+Invariants describe what remains consistent when reasoning about systems under CNIG.
 
-- all local components are individually valid  
-- all policies appear correctly enforced  
-- observability systems remain healthy  
-- yet the global system enters unstable or unsafe operational states  
+They are not enforced rules or runtime checks.
 
-This class of failure is modeled as:
-
-compositionally valid execution producing inadmissible global system states
+- Identity Invariant — consistency of system identity across representation and interpretation  
+- Stability Invariant — bounded deviation in system behavior under variation  
+- Behavioral Invariant — consistency between expected and observed behavior across contexts  
+- Structural Invariant — preservation of relational coherence under composition  
 
 ---
 
-## CNIG Analysis Lens
+## 4. Primitives (Reasoning Vocabulary)
 
-CNIG investigates this problem through:
+Primitives are the core concepts used to describe systems under CNIG.
 
-- state-transition admissibility  
-- compositional interaction topology  
-- reachable state space expansion  
-- governance-execution separation  
-- emergent privilege surfaces  
+They are not components or implementation targets.
 
----
-
-## Core Hypothesis
-
-System safety in distributed environments is fundamentally constrained by reachable state space under composition rather than isolated component correctness.
+- Reachable State Space — all possible system states under composition  
+- Admissible System State — subset of states considered structurally coherent  
+- Constraint-Native Governance — constraints that shape allowable system behavior  
+- State Transition Validation — reasoning about movement between system states  
+- Execution vs Governance Separation — distinction between local execution correctness and global system behavior  
+- Privilege Surface — emergent interaction space created by system composition  
 
 ---
 
-## Canonical Invariant Set (CNIG v1)
+## 5. Failure Modes (Compositional Breakdown Patterns)
 
-Identity Invariant — consistency of governance identity under transformation  
-Stability Invariant — bounded system behavior under variation  
-Behavioral Invariant — constraint alignment of local actions to global outcomes  
-Structural Invariant — coherence under compositional expansion  
+Failure modes describe ways in which system composition can produce unintended or unstable global behavior.
 
----
+They are descriptive categories, not operational alerts.
 
-## Canonical Primitive Set
-
-Admissible System State  
-Constraint-Native Governance  
-Execution vs Governance Separation  
-State-Transition Validation  
-Privilege Surface  
-
----
-
-## Canonical Failure Modes
-
-Constraint Overreach Failure  
-Execution-before-validation Drift  
-Governance Lag Failure  
-Implicit State Reachability  
-Privilege Surface Expansion  
+- Governance Capture — system behavior shifts away from intended structural constraints  
+- Reference Drift — divergence in meaning or interpretation across system boundaries  
+- Constitutional Fragmentation — breakdown of global consistency into incompatible local interpretations  
+- Invariant Overconstraint — reduction of valid system behaviors due to overly restrictive composition  
+- Recursive Governance Instability — instability caused by self-referential evaluation of governance  
+- Implicit Reachability Expansion Failure — emergence of unexpected system states under composition  
+- Stochastic Drift — variation in system outcomes under equivalent conditions  
+- Phase Desynchronization — misalignment between state change and interpretation over time  
+- Privilege Surface Expansion Failure — unintended expansion of interaction pathways  
+- Null State Boundary Violation — system reaches a state with no valid continuation under constraints  
 
 ---
 
-## Domain Scope
+## 6. Usage Context
 
-Distributed microservices  
-IAM / privilege systems  
-Kubernetes / CI-CD pipelines  
-AI-integrated infrastructure systems  
-Large-scale orchestration systems  
-Distributed service composition systems  
+CNIG is used for:
 
----
+- reasoning about distributed system behavior  
+- analyzing architectural composition risks  
+- discussing emergent system properties  
+- understanding divergence between local correctness and global behavior  
 
-## Epistemic Boundary
-
-CNIG is theoretical and interpretive.
-
-It does not claim:
-- implementation completeness  
-- runtime feasibility guarantees  
-- formal verification completeness  
-- operational enforcement  
+It is not a system design framework, enforcement model, or runtime architecture.
 
 ---
 
-## Intended Audience
+## 7. Epistemic Boundary
 
-Distributed systems researchers  
-AI infrastructure researchers  
-AI governance researchers  
-Cloud architecture researchers  
-Systems theorists  
-Reliability engineers  
+CNIG is strictly conceptual.
 
----
+It does not provide implementation guidance or operational guarantees.
 
-## Canonical Attribution
-
-Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki
-
-All interpretations, derivatives, and external references must preserve attribution to the original framework and author.
+It is a lens for interpretation, not a mechanism for execution.
