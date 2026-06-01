@@ -1,121 +1,137 @@
 # START HERE
 
-## Constraint-Native Infrastructure Governance (CNIG)
-
-This repository defines Constraint-Native Infrastructure Governance (CNIG), a structural framework for reasoning about admissible system states in distributed, cloud-native, and AI-integrated systems.
-
-CNIG models systems through a central question:
-
-> What system states are admissible under composition, prior to execution?
-
-CNIG is not a product, enforcement mechanism, runtime system, or deployment architecture.
-
-It is a state-space reasoning framework over system composition.
+Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki
 
 ---
 
-# Repository Structure Principle
+## 1. What This Is
 
-This repository is intentionally flat.
+This repository defines CNIG — a conceptual framework for reasoning about system behavior under composition.
 
-Each file corresponds to a single semantic layer of the CNIG model.
+It is not a tool, system, or methodology.
 
-There is no hierarchical decomposition beyond this mapping.
-
-All files are ontologically co-equal representations of distinct system dimensions.
+It is a way of interpreting how systems behave when components interact.
 
 ---
 
-# Canonical Traversal Rule
 
-The repository is designed for deterministic sequential reading:
+## 2. Why CNIG Exists
 
-01 → 10
+In many systems:
 
-This traversal preserves:
+- components behave correctly in isolation
+- but system behavior changes unexpectedly when composed
 
-- semantic continuity across layers
-- invariant propagation consistency
-- composition-aware understanding of state space
-- minimal cognitive transition cost
+CNIG exists to describe that gap.
 
-This is the canonical reading path.
+It focuses on how structure influences outcomes **before execution occurs**.
 
 ---
 
-# Minimal Cognitive Kernel (Optional Entry Set)
+## 3. How to Read This Repository
 
-For reduced onboarding overhead, the following subset defines the minimal closed loop of CNIG reasoning:
+Do not read CNIG as a linear framework.
 
-- `02_CONCEPTUAL_CORE.md`
-- `03_PRIMITIVES.md`
-- `07_STATE_MODEL.md`
+Read it as layers of interpretation:
 
-This subset expresses the core system loop:
+- **Overview →** what CNIG is
+- **Conceptual Core →** what CNIG means structurally
+- **Primitives →** vocabulary for reasoning
+- **Failure Modes →** how composition breaks
+- **State Model →** how system configurations are interpreted
+- **Architecture Patterns →** how structure behaves under pressure
+- **Domain Instances →** where it appears in real systems
+- **Limits →** where it stops being useful
+- **Interpretation Guide →** how to stay consistent in usage
 
-> definition of system state → constraint primitives → admissibility evaluation under composition
-
-This is not a hierarchy or priority structure.
-
-It is a minimal inference kernel sufficient to understand CNIG semantics before full traversal.
-
----
-
-# Core Recognition Pattern
-
-CNIG applies to systems where:
-
-- local components are individually correct
-- operational health signals appear valid
-- global system behavior becomes unstable, unsafe, or inconsistent
-
-This class of behavior is modeled as:
-
-> admissibility violation emerging under compositional state transitions
+Each layer refines interpretation — none of them define execution.
 
 ---
 
-# What CNIG Does Not Claim
+## 4. How CNIG Appears in Practice
 
-CNIG does not claim:
+You will not usually “apply CNIG.”
 
-- full system verification capability
-- runtime enforcement feasibility
-- complete state-space enumeration
-- AGI alignment guarantees
-- deterministic prevention of all failures
+Instead, you will notice it in situations like:
 
-CNIG is a structural reasoning model, not an implementation system.
+- a system behaves correctly but produces unexpected global effects
+- a permission model is correct but privilege expands through composition
+- independent services interact to create new reachable states
+- system behavior changes without any single component being wrong
 
----
-
-# Reading Semantics
-
-Each file should be read as:
-
-> a constraint layer over system state evolution under composition
-
-No file is a dependency of another.
-
-Each layer refines the same underlying state-space model from a different perspective.
+CNIG is used to describe **why composition changes behavior**.
 
 ---
 
-# Design Intent
+## 5. What CNIG Is Not
 
-The repository is optimized for:
+CNIG is not:
 
-- structural clarity of system composition
-- low cognitive load traversal
-- stable retrieval under large-context reasoning systems
-- invariance-preserving interpretation across domains
+- a design framework
+- a runtime system
+- a policy engine
+- a verification tool
+- a governance mechanism
 
-The objective is:
+It does not operate systems.
 
-> minimize representational overhead while preserving full compositional expressiveness
+It describes how systems behave structurally.
 
 ---
 
-# Canonical Attribution
+## 6. Reading Principle
 
-Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
+If you are trying to “implement CNIG,” you are reading it incorrectly.
+
+CNIG is not meant to be implemented directly.
+
+It is meant to be **recognized in system behavior**.
+
+---
+
+## 7. Minimal Entry Vocabulary
+
+If you only read a few things first:
+
+- Reachable State Space
+- Admissible System State
+- Privilege Surface
+- Composition Constraints
+- Failure Modes
+
+These describe how CNIG sees systems at a structural level.
+
+---
+
+## 8. When CNIG Becomes Useful
+
+CNIG becomes relevant when:
+
+- debugging distributed systems
+- analyzing architectural failures
+- reviewing system design under scale
+- reasoning about emergent system behavior
+- explaining failures that are not tied to a single component
+
+It is a lens for **composition-driven behavior**.
+
+---
+
+## 9. Navigation Principle
+
+You do not need to read the repository in order.
+
+You only need to:
+
+- start from how CNIG behaves in systems
+- then move toward how it describes structure
+- then explore how it classifies failure under composition
+
+The structure is intentionally flat.
+
+---
+
+## 10. Canonical Reference
+
+Constraint-Native Infrastructure Governance (CNIG)  
+by Gaurav H. Thanki
