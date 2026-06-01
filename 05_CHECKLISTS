@@ -1,69 +1,132 @@
-# 05_CHECKLISTS.md
+# CNIG Checklists
 
-Constraint-Native Infrastructure Governance (CNIG)  
-Checklists Layer
-
----
-
-## 1. Pre-Execution Validation Checklist
-
-Used to validate whether a proposed action is admissible before execution.
-
-- Has the proposed state transition been explicitly defined?  
-- Have all constraints been evaluated prior to execution?  
-- Are indirect or implicit execution paths identified?  
-- Is the privilege surface fully understood for this operation?  
-- Does the resulting state remain within admissible boundaries?  
+Constraint-Native Infrastructure Governance (CNIG)
 
 ---
 
-## 2. Architecture Review Checklist
+## 1. Purpose of This Layer
 
-Used to evaluate system design under CNIG principles.
+This layer defines structured reasoning checklists used to evaluate system behavior through the CNIG lens.
 
-- Are all system state transitions explicitly modeled?  
-- Is governance strictly separated from execution logic?  
-- Are admissible system states clearly defined?  
-- Are failure domains identified and bounded?  
-- Does the architecture avoid implicit state reachability?  
+These checklists are designed for **pre-execution analysis and architectural reasoning**, not runtime validation or enforcement.
+
+They support structured thinking about system composition under CNIG.
 
 ---
 
-## 3. Privilege Surface Analysis Checklist
+## 2. Nature of CNIG Checklists
 
-Used to evaluate emergent system capability expansion.
+CNIG checklists are:
 
-- Are all reachable actions explicitly mapped?  
-- Are indirect execution paths identified?  
-- Does composition of permissions expand effective capability?  
-- Are delegation chains bounded and traceable?  
-- Is cross-system privilege propagation understood?  
+- cognitive evaluation guides
+- structural reasoning prompts
+- pre-execution analytical scaffolding
 
----
+They are not:
 
-## 4. System Admissibility Checklist
-
-Used to determine whether a system state is valid under CNIG.
-
-- Does the proposed state satisfy all constraints?  
-- Is the transition explicitly permitted by governance rules?  
-- Are all emergent interactions accounted for?  
-- Is the resulting state consistent with invariants?  
+- CI/CD gates
+- validation pipelines
+- compliance checks
+- automated decision systems
 
 ---
 
-## 5. Structural Interpretation
-
-Checklists in CNIG are not procedural guides.
-
-They function as:
-
-> structured admissibility filters over proposed system state transitions
-
-They represent evaluation logic, not operational workflows.
+## 3. Core Checklist Categories
 
 ---
 
-## 6. Canonical Attribution
+### 3.1 Composition Consistency Check
 
-Based on Constraint-Native Infrastructure Governance by Gaurav H Thanki
+- Do system components remain consistent under composition?
+- Does interaction between components introduce new structural behavior?
+- Does correctness at the component level imply correctness at system level?
+
+Interpretation focus: **composition effects, not component correctness**
+
+---
+
+### 3.2 Reachability Analysis Check
+
+- What system states become reachable under current composition?
+- Are all reachable states structurally anticipated?
+- Does composition expand possibility space unintentionally?
+
+Interpretation focus: **emergent state space, not execution paths**
+
+---
+
+### 3.3 Admissibility Boundary Check
+
+- Which reachable states are structurally admissible?
+- Are admissibility boundaries stable under composition?
+- Do constraints behave consistently across system boundaries?
+
+Interpretation focus: **structural validity, not policy enforcement**
+
+---
+
+### 3.4 Interaction Topology Check (Privilege Surface)
+
+- How does system composition change interaction pathways?
+- Are new interaction routes introduced through integration?
+- Does system coupling expand or restrict structural reachability?
+
+Interpretation focus: **topological change, not access control**
+
+---
+
+### 3.5 Governance Separation Check
+
+- Is there a clear distinction between local execution and global structure?
+- Does governance depend on execution-level behavior?
+- Does system structure influence interpretation of correctness?
+
+Interpretation focus: **analytical separation, not architecture separation**
+
+---
+
+## 4. Checklist Usage Principle
+
+These checklists are intended to:
+
+- structure architectural discussion
+- guide reasoning about system composition
+- surface hidden structural assumptions
+
+They are not intended to:
+
+- approve or reject system changes
+- enforce compliance rules
+- act as automated decision gates
+
+---
+
+## 5. Interpretation Constraint
+
+A checklist item is not a requirement.
+
+It is a **question that exposes structural assumptions in system design**.
+
+---
+
+## 6. Relationship to CNIG Core
+
+These checklists operate over:
+
+- primitives (structural vocabulary)
+- invariants (stability conditions)
+- failure modes (deviation patterns)
+
+They do not modify them.
+
+They provide structured access to them in reasoning contexts.
+
+---
+
+## 7. Transition to Decision Layer
+
+The next layer defines structured decision reasoning templates under CNIG.
+
+See:
+
+`06_DECISION_TEMPLATES.md`
