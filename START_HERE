@@ -26,6 +26,37 @@ CNIG exists to describe that gap.
 
 It focuses on how structure influences outcomes **before execution occurs**.
 
+## 2. Why CNIG Exists
+
+In many systems:
+
+- components behave correctly in isolation
+- but system behavior changes unexpectedly when composed
+
+CNIG exists to describe that gap.
+
+It focuses on how structure influences outcomes before execution occurs.
+
+---
+
+## 2.1 Relationship to Existing Systems (IMPORTANT)
+
+CNIG is not an alternative to existing security, governance, or systems engineering frameworks.
+
+It operates only as a secondary interpretive layer that describes compositional effects within systems already governed by established practices such as:
+
+- RBAC / ABAC models  
+- Zero Trust architectures  
+- SRE practices  
+- policy-as-code systems  
+- formal verification systems  
+
+CNIG does not replace, compete with, or redefine these systems.
+
+It assumes they exist and are operational.
+
+CNIG observes how system-level behavior emerges when such frameworks interact under composition.
+
 ---
 
 ## 3. How to Read This Repository
