@@ -14,7 +14,6 @@ It is a way of interpreting how systems behave when components interact.
 
 ---
 
-
 ## 2. Why CNIG Exists
 
 In many systems:
@@ -24,18 +23,7 @@ In many systems:
 
 CNIG exists to describe that gap.
 
-It focuses on how structure influences outcomes **before execution occurs**.
-
-## 2. Why CNIG Exists
-
-In many systems:
-
-- components behave correctly in isolation
-- but system behavior changes unexpectedly when composed
-
-CNIG exists to describe that gap.
-
-It focuses on how structure influences outcomes before execution occurs.
+It focuses on how structure can influence outcomes before execution occurs.
 
 ---
 
