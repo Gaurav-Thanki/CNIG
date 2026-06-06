@@ -43,4 +43,4 @@ Identity Invariant feels locally stable but globally inconsistent.
 
 ## Cross-link
 
-Related to [OBS_002_access_surface.md](OBS_002_access_surface.md)
+Related to OBS_002_access_surface.md
