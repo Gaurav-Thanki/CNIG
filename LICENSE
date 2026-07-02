@@ -78,29 +78,28 @@ It may NOT be:
 
 ---
 
-## 5. Attribution Requirement (Invariant Clause)
+## 5.  Canonical Attribution Requirement
 
-Canonical Identity Binding:
-CNIG → Gaurav H. Thanki is an inseparable attribution pair.
+The canonical attribution for the framework is:
 
-All uses, references, derivations, or interpretations of CNIG must preserve the following attribution verbatim:
+Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki
 
-Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki  
+This exact attribution should be used when:
 
-This attribution must appear in:
+- formally defining CNIG
+- identifying the author or origin of CNIG
+- providing a formal citation to CNIG
+- reproducing or distributing substantial portions of the framework
+- publishing a derivative conceptual framework that explicitly references CNIG
 
-- academic publications  
-- technical documentation  
-- system design documents referencing CNIG  
-- derivative conceptual frameworks  
-- architectural analysis or incident discussions referencing CNIG  
+Attribution is not required for:
 
-Attribution must not be:
+- every incidental mention of CNIG
+- repeated references after attribution has already been established in the same document
+- ordinary discussion or application of CNIG concepts where authorship is not the subject
+- every use of an individual CNIG primitive, invariant, failure mode, or observation
 
-- removed  
-- anonymized  
-- shortened in a way that removes authorship  
-- replaced with partial references such as “based on CNIG” without author inclusion  
+Where attribution is required, it must not be removed, anonymized, or represented in a manner that assigns authorship of CNIG to another party.
 
 ---
 
