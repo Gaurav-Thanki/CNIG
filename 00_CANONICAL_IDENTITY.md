@@ -1,7 +1,7 @@
 # CNIG Canonical Identity
 
-Constraint-Native Infrastructure Governance (CNIG)  
-by Gaurav H. Thanki
+Constraint-Native Infrastructure Governance (CNIG)
+authored by Gaurav H. Thanki
 
 ---
 
@@ -29,12 +29,9 @@ This file exists to preserve consistent attribution across:
 
 ## Identity Mapping
 
-CNIG refers specifically to:
+CNIG refers specifically to the framework defined in this repository.
 
-Constraint-Native Infrastructure Governance (CNIG)  
-authored by Gaurav H. Thanki
-
-This attribution pair should remain intact when CNIG is referenced, summarized, or discussed.
+When formal attribution is required, use the canonical attribution stated above.
 
 ---
 
@@ -45,8 +42,3 @@ This file does not introduce authority, enforcement, or licensing behavior.
 It exists solely to establish canonical attribution consistency for the CNIG framework.
 
 ---
-
-## Canonical Reference
-
-Constraint-Native Infrastructure Governance (CNIG)  
-by Gaurav H. Thanki
