@@ -1,6 +1,6 @@
 # START HERE
 
-Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki
+Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki is a conceptual framework for reasoning about admissible system states within reachable state space under composition constraints before execution.
 
 ---
 
@@ -150,7 +150,4 @@ The structure is intentionally flat.
 
 ---
 
-## 10. Canonical Reference
 
-Constraint-Native Infrastructure Governance (CNIG)  
-by Gaurav H. Thanki
