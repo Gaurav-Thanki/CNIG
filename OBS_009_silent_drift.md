@@ -28,13 +28,12 @@ The composition did.
 
 As interaction relationships accumulated, the system’s reachable state space changed.
 
-A state that was previously unavailable, excluded, or structurally unrepresented became reachable through the combined effect of otherwise valid system relationships.
-
+A state that was previously unreachable—or absent from the represented reachable-state model—became reachable through the combined effect of otherwise valid system relationships.
 ---
 
 ## CNIG lens (informal)
 
-A structural failure does not always appear as an error.
+A structural change does not always appear as an error.
 
 It may appear as a change in what the composed system can reach.
 
