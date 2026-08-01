@@ -2,7 +2,7 @@
 
 A composed system had a governance constraint represented across multiple layers.
 
-The relevant:
+The following remained present:
 
 * policies remained present
 * configurations remained valid
