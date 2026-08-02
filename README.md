@@ -14,14 +14,14 @@ CNIG addresses:
 
 These are systems in which:
 
-* components satisfy their local specifications;
+* individual components satisfy, or are materially consistent with, their local specifications;
 * local configurations, permissions, policies, and transitions may be valid;
-* no single component fault explains the complete outcome;
+* no single local defect sufficiently explains the complete system-level condition;
 * but the composition makes a globally unintended or inadmissible State reachable.
 
 The defining CNIG distinction is:
 
-> Local correctness does not establish global admissibility.
+> Local correctness does not establish global Admissibility.
 
 The primary question is not only:
 
@@ -476,13 +476,35 @@ CNIG provides:
 * a canonical set of Invariants;
 * a canonical Failure Mode taxonomy;
 * a structural distinction between execution correctness and governance validity;
-* a non-operational methodology for evidence-grounded diagnostic interpretation.
+* a bounded, non-operational basis for evidence-grounded diagnostic analysis.
+
+The external methodology used to apply CNIG to observational evidence is defined separately in:
+
+`12_CNIG_DIAGNOSTIC_INTERPRETATION_METHODOLOGY.md`
+
+That methodology remains subordinate to the canonical framework and does not redefine CNIG as a methodology.
 
 ---
 
 ## 14. How to Read This Repository
 
-Use the following canonical sequence.
+The repository contains entry surfaces, canonical ontology, analytical layers, representational layers, conceptual assets, and non-canonical observations.
+
+These layers do not carry equal definitional authority.
+
+### Reader entry point
+
+`START_HERE.md`
+
+Provides the primary reading path and repository navigation.
+
+### Optional overview
+
+`CNIG_OVERVIEW.md`
+
+Provides a non-authoritative overview of the complete framework and repository structure.
+
+It does not independently define CNIG.
 
 ### Framework identity
 
@@ -490,23 +512,25 @@ Use the following canonical sequence.
 
 Defines the canonical framework name, authorship, and attribution.
 
-### Orientation
+### Applicability orientation
 
-`START_HERE.md`
+`01_ORIENTATION_LAYER.md`
 
-Provides the reader entry point and repository navigation.
+Provides an initial orientation for determining whether a bounded system question may warrant CNIG analysis.
+
+It does not independently define the problem class or canonical ontology.
 
 ### Problem class
 
 `PROBLEM_CLASS.md`
 
-Defines the precise condition CNIG addresses and where it should not be applied.
+Defines the precise condition CNIG addresses, its applicability boundary, and when a simpler explanation should remain primary.
 
 ### Conceptual core
 
 `02_CONCEPTUAL_CORE.md`
 
-Defines the canonical framework scope and primary structural distinction.
+Defines the canonical framework scope and primary structural distinctions.
 
 ### Primitives
 
@@ -518,19 +542,59 @@ Defines the six canonical Primitives.
 
 `04_FAILURE_MODES.md`
 
-Defines the ten canonical Failure Modes and their distinctions.
+Defines the ten canonical Failure Modes and their distinguishing structural conditions.
+
+### Analytical checklists
+
+`05_CHECKLISTS.md`
+
+Provides external analytical prompts for evidence intake, structural decomposition, Reachability evaluation, Admissibility evaluation, Invariant assessment, and Failure Mode attribution.
+
+The checklists do not define canonical concepts or authorize action.
+
+### Analytical decision templates
+
+`06_DECISION_TEMPLATES.md`
+
+Provides external templates for recording CNIG analysis in a decision context.
+
+CNIG analysis remains separate from external decision authority.
+
+### State and Transition model
+
+`07_STATE_MODEL.md`
+
+Provides the conceptual representation of States, Transitions, Transition Paths, Reachability, Admissibility, authority, capability, and temporal phase.
+
+It is not an executable State machine.
+
+### Structural composition patterns
+
+`08_ARCHITECTURE_PATTERNS.md`
+
+Provides non-canonical and non-exhaustive descriptions of recurring structural arrangements.
+
+Patterns do not map automatically to Failure Modes.
+
+### Domain illustrations
+
+`09_DOMAIN_INSTANCES.md`
+
+Provides non-canonical illustrations of how fixed CNIG concepts may be applied to domain-specific evidence.
+
+It does not create canonical domain editions, domain packs, or implementation mappings.
 
 ### System limits
 
 `10_SYSTEM_LIMITS.md`
 
-Defines the limits of applicability, evidence, modelling, attribution, and implementation claims.
+Defines limits involving applicability, evidence, Structural Model completeness, causal attribution, formalization, prediction, and implementation claims.
 
 ### Interpretation boundary
 
 `11_INTERPRETATION_GUIDE.md`
 
-Defines how CNIG concepts should be read without ontology drift.
+Defines how CNIG concepts should be read without ontology drift or substitution by adjacent frameworks.
 
 ### Diagnostic methodology
 
@@ -544,7 +608,7 @@ CNIG itself remains a conceptual framework, not a methodology.
 
 `GLOSSARY.md`
 
-Defines canonical terminology and the four Invariants.
+Defines canonical terminology, the four Invariants, diagnostic states, and important conceptual distinctions.
 
 ### Conceptual assets
 
@@ -553,13 +617,15 @@ Defines canonical terminology and the four Invariants.
 
 These illustrate canonical distinctions without creating new ontology.
 
+The second filename is retained for repository continuity, but the asset defines an Invariant evaluation overlay. Invariants do not filter, create, remove, or authorize States.
+
 ### Observations
 
 `OBS_*` files provide non-canonical illustrative structural cases.
 
-They may contribute evidence patterns and graph relationships.
+They may illustrate canonical concepts and graph relationships.
 
-They do not override canonical definitions.
+They do not override or redefine canonical definitions.
 
 ---
 
@@ -567,7 +633,14 @@ They do not override canonical definitions.
 
 CNIG files do not carry equal definitional authority.
 
-Where files conflict, use the following order:
+The following are navigation, orientation, or overview surfaces and do not independently redefine CNIG:
+
+* `README.md`
+* `START_HERE.md`
+* `CNIG_OVERVIEW.md`
+* `01_ORIENTATION_LAYER.md`
+
+Where definitions conflict, use the following authority order:
 
 1. `00_CANONICAL_IDENTITY.md`
 2. `PROBLEM_CLASS.md`
@@ -578,8 +651,37 @@ Where files conflict, use the following order:
 7. `10_SYSTEM_LIMITS.md`
 8. `11_INTERPRETATION_GUIDE.md`
 9. `12_CNIG_DIAGNOSTIC_INTERPRETATION_METHODOLOGY.md`
-10. conceptual assets
-11. observation files
+10. analytical and representational layers
+11. conceptual assets
+12. observation files
+
+The analytical and representational layers are:
+
+* `05_CHECKLISTS.md`
+* `06_DECISION_TEMPLATES.md`
+* `07_STATE_MODEL.md`
+* `08_ARCHITECTURE_PATTERNS.md`
+* `09_DOMAIN_INSTANCES.md`
+
+A lower-authority layer may:
+
+* illustrate;
+* organize;
+* contextualize;
+* represent;
+* or apply
+
+a canonical concept.
+
+It may not silently:
+
+* rename it;
+* broaden it;
+* narrow it;
+* merge it;
+* reorder it;
+* replace it;
+* import another framework’s ontology into it.
 
 Observation wording must not redefine the canonical framework.
 
