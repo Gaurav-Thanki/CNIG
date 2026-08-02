@@ -1,199 +1,548 @@
-# CNIG License v1.1 — Structural Framework Governance License
+# CNIG License v1.2 — Structural Framework Governance License
+
 ## Constraint-Native Infrastructure Governance (CNIG)
 
-Copyright (c) 2026  
-Gaurav H. Thanki  
+Copyright © 2026 Gaurav H. Thanki
+All rights reserved except as expressly permitted by this license.
+
+Effective date: 2026-08-02
 
 ---
 
-## 1. Purpose
+## 1. Framework Identity
 
-This license governs the use of:
+This license governs the public framework materials identified as:
 
-Constraint-Native Infrastructure Governance (CNIG)
+> **Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki**
 
-Authored by Gaurav H. Thanki.
+CNIG is a bounded conceptual framework for reasoning about admissible system States within Reachable State Space under composition constraints prior to execution.
 
-CNIG is a conceptual framework for reasoning about admissible system states within reachable state space under composition constraints prior to execution.
+CNIG addresses:
 
-It is intended for:
+> **component-correct, composition-inadmissible systems.**
 
-- systems interpretation
-- architectural reasoning
-- research and academic analysis
-- conceptual discussion of distributed systems behavior
+Its primary analytical object is the actual composed system and the States made structurally reachable through its relationships.
 
-CNIG is not a system, product, methodology, or execution framework.
+CNIG is conceptual and non-operational.
 
 ---
 
-## 2. Nature of CNIG
+## 2. Covered Materials
 
-CNIG is:
+This license applies to the publicly distributed CNIG materials contained in this repository, including:
 
-- a conceptual reasoning model  
-- a vocabulary for compositional system analysis  
-- a lens for describing emergent behavior in distributed systems  
+* canonical framework files;
+* Primitives;
+* Invariants;
+* Failure Modes;
+* terminology and definitions;
+* conceptual models;
+* analytical checklists;
+* analytical decision templates;
+* interpretation guidance;
+* diagnostic methodology;
+* diagrams and conceptual assets;
+* domain illustrations;
+* observation files;
+* repository documentation.
+
+Collectively, these are referred to as the **Framework Materials**.
+
+This license does not alter the authority hierarchy or ontology defined within the Framework Materials.
+
+---
+
+## 3. Nature of CNIG
+
+CNIG provides a conceptual vocabulary and structural framework for reasoning about:
+
+* system composition;
+* Reachable State Space;
+* Admissible System States;
+* Source States;
+* Intermediate States;
+* Target States;
+* Transition Paths;
+* Governing Constraints;
+* Governing Intent;
+* Effective Authority;
+* Effective Capability;
+* Privilege Surface;
+* preservation of structural Invariants;
+* evidence-supported compositional Failure Modes.
 
 CNIG is not:
 
-- a runtime system  
-- a policy enforcement engine  
-- a compliance framework  
-- a formal verification system  
-- a design implementation standard  
+* a runtime system;
+* a software product;
+* a software architecture;
+* a policy engine;
+* an enforcement mechanism;
+* a compliance framework;
+* a certification mechanism;
+* a monitoring system;
+* an executable specification;
+* a formal verification system;
+* a production decision authority;
+* an autonomous controller;
+* an implementation standard;
+* a safety-certified system.
 
-CNIG does not imply the existence, requirement, or feasibility of any software implementation.
+CNIG does not itself:
 
----
-
-## 3. Permitted Use
-
-CNIG may be used for:
-
-- reading and interpretation  
-- academic research and citation  
-- systems design discussion (conceptual only)  
-- architectural review and analysis  
-- non-commercial experimentation  
-- internal discussion of system behavior as a conceptual reference  
-
-All usage must comply with Sections 5 and 6.
-
-CNIG must not be treated as an operational framework in any environment.
-
----
-
-## 4. Commercial Context Use
-
-CNIG may be referenced in commercial environments only as a conceptual lens for analysis and design discussion.
-
-It may NOT be:
-
-- packaged as a product or feature  
-- sold as a methodology, framework, or system  
-- embedded as a governance or control mechanism  
-- used as a branding replacement for engineering processes  
-- converted into executable logic, workflows, or enforcement systems  
+* execute actions;
+* approve or reject transitions;
+* enforce constraints;
+* block changes;
+* authorize activity;
+* remediate systems;
+* control system behaviour;
+* guarantee system outcomes.
 
 ---
 
-## 5.  Canonical Attribution Requirement
+## 4. Permitted Use
 
-The canonical attribution for the framework is:
+Subject to the conditions of this license, the Framework Materials may be:
 
-Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki
+* read;
+* studied;
+* cited;
+* referenced;
+* discussed;
+* reviewed;
+* taught;
+* analysed;
+* quoted in reasonable portions;
+* used in academic or professional research;
+* used in conceptual systems analysis;
+* used in non-operational architecture discussion;
+* used in internal governance or engineering discussion;
+* redistributed in unmodified form.
 
-This exact attribution should be used when:
+Commercial organizations may reference CNIG for:
 
-- formally defining CNIG
-- identifying the author or origin of CNIG
-- providing a formal citation to CNIG
-- reproducing or distributing substantial portions of the framework
-- publishing a derivative conceptual framework that explicitly references CNIG
+* internal conceptual analysis;
+* architectural discussion;
+* research;
+* education;
+* evaluation of system structure;
+* professional commentary.
+
+Permitted use does not grant operational implementation rights.
+
+---
+
+## 5. Canonical Attribution Requirement
+
+The canonical attribution is:
+
+> **Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki**
+
+This exact attribution must be used when:
+
+* formally defining CNIG;
+* identifying the author or origin of CNIG;
+* citing the framework;
+* reproducing substantial portions of the Framework Materials;
+* redistributing the Framework Materials;
+* publishing a conceptual derivative that expressly relies on CNIG;
+* presenting a CNIG Primitive, Invariant, or Failure Mode as originating from the framework.
 
 Attribution is not required for:
 
-- every incidental mention of CNIG
-- repeated references after attribution has already been established in the same document
-- ordinary discussion or application of CNIG concepts where authorship is not the subject
-- every use of an individual CNIG primitive, invariant, failure mode, or observation
+* every incidental mention;
+* every repeated reference after attribution has already been established in the same work;
+* ordinary discussion where authorship has already been made clear;
+* brief references that do not reproduce substantial Framework Materials.
 
-Where attribution is required, it must not be removed, anonymized, or represented in a manner that assigns authorship of CNIG to another party.
+Attribution must not be:
+
+* removed;
+* obscured;
+* falsified;
+* reassigned;
+* represented in a manner that attributes authorship of CNIG to another person or organization.
 
 ---
 
-## 6. Non-Authority Clause (CRITICAL HARDENING)
+## 6. Canonical Integrity Requirement
+
+The canonical names and ordering of the following must remain stable when represented as CNIG.
+
+### Six Primitives
+
+1. Reachable State Space
+2. Admissible System State
+3. Constraint-Native Governance
+4. State Transition Validation
+5. Execution vs Governance Separation
+6. Privilege Surface
+
+### Four Invariants
+
+1. Identity Invariant
+2. Stability Invariant
+3. Behavioral Invariant
+4. Structural Invariant
+
+### Ten Failure Modes
+
+1. Governance Capture
+2. Reference Drift
+3. Constitutional Fragmentation
+4. Invariant Overconstraint
+5. Recursive Governance Instability
+6. Implicit Reachability Expansion Failure
+7. Stochastic Drift
+8. Phase Desynchronization
+9. Privilege Surface Expansion Failure
+10. Null State Boundary Violation
+
+A modified, expanded, merged, reordered, or substituted ontology must not be represented as canonical CNIG.
+
+External commentary may:
+
+* criticize;
+* compare;
+* extend;
+* reinterpret;
+* adapt;
+* propose alternatives
+
+provided that it clearly distinguishes those changes from canonical CNIG.
+
+---
+
+## 7. Non-Operational Boundary
+
+External applications may reference or apply CNIG concepts, but any implementation remains outside CNIG and does not alter the canonical framework.
+
+This conceptual boundary does not itself grant permission to create an operational derivative.
+
+Unless separately authorized in writing by Gaurav H. Thanki, the Framework Materials may not be converted into, embedded within, or represented as:
+
+* executable governance logic;
+* runtime enforcement;
+* automated approval or rejection logic;
+* CI/CD gating logic;
+* policy-enforcement software;
+* production transition validation;
+* autonomous decision-making;
+* compliance determination;
+* certification logic;
+* safety authorization;
+* risk-acceptance authority;
+* operational control logic;
+* a production governance engine;
+* an autonomous agent-control system.
+
+No implementation may be represented as:
+
+* CNIG itself;
+* the canonical implementation of CNIG;
+* an official CNIG runtime;
+* an official CNIG decision engine;
+* proof that CNIG guarantees correctness;
+* proof that CNIG authorizes a system change;
+* proof that CNIG certifies a system as safe or compliant.
+
+---
+
+## 8. Operational Derivatives
+
+This public license does not grant permission to create or distribute an operational derivative of CNIG.
+
+An **operational derivative** includes software, logic, workflows, controls, services, or systems that:
+
+* execute CNIG-derived decisions;
+* enforce CNIG-derived constraints;
+* approve or reject system transitions;
+* govern production activity;
+* determine compliance;
+* certify Admissibility;
+* control access or authority;
+* autonomously act on CNIG classifications;
+* present CNIG as an operational product or service.
+
+Operational derivatives require separate, explicit, written authorization from Gaurav H. Thanki.
+
+Authorization for one operational derivative does not authorize:
+
+* another implementation;
+* redistribution;
+* sublicensing;
+* publication;
+* transfer of authority;
+* alteration of the canonical framework.
+
+---
+
+## 9. Conceptual Derivative Works
+
+Conceptual derivative works are permitted where they remain non-operational and comply with this license.
+
+A conceptual derivative may include:
+
+* academic analysis;
+* commentary;
+* criticism;
+* comparative research;
+* educational material;
+* non-operational diagrams;
+* conceptual extensions;
+* domain-specific discussion;
+* independent analytical methods.
+
+A conceptual derivative must:
+
+1. provide the required attribution;
+2. identify itself as external to canonical CNIG;
+3. distinguish modified or additional concepts from canonical CNIG;
+4. avoid presenting itself as an official CNIG edition;
+5. preserve the non-operational boundary;
+6. avoid representing modified definitions as canonical;
+7. include a reference to the original Framework Materials where reasonably practical.
+
+A conceptual derivative does not become part of CNIG merely because it references or applies CNIG concepts.
+
+---
+
+## 10. Redistribution
+
+Unmodified copies of the Framework Materials may be redistributed provided that:
+
+* the canonical attribution remains intact;
+* this license remains included;
+* copyright notices remain intact;
+* the material is not represented as originating from another author;
+* the material is not presented as an operational implementation;
+* no additional terms contradict this license.
+
+Substantial modified copies must be clearly marked as modified.
+
+Modified copies must not be represented as:
+
+* canonical CNIG;
+* an official CNIG release;
+* an authorized revision;
+* a replacement for the canonical repository.
+
+---
+
+## 11. Commercial Restrictions
+
+The Framework Materials may be referenced in commercial contexts for conceptual analysis, discussion, research, or education.
+
+Without separate written authorization, the Framework Materials may not be:
+
+* sold as an operational methodology;
+* packaged as a commercial governance product;
+* licensed as executable governance logic;
+* embedded as a commercial enforcement feature;
+* presented as a compliance or certification product;
+* marketed as an official CNIG implementation;
+* used to imply endorsement by Gaurav H. Thanki;
+* used to transfer operational authority to a product or service.
+
+Commercial consulting or analysis may reference CNIG provided that:
+
+* the use remains conceptual;
+* attribution is preserved;
+* the service is not represented as CNIG itself;
+* no operational authority is attributed to CNIG;
+* no unauthorized operational derivative is created.
+
+---
+
+## 12. No Authority Transfer
 
 CNIG has no operational authority in any system in which it is referenced.
 
-Specifically:
+A positive CNIG analysis does not:
 
-- CNIG may not be used to approve or deny system changes  
-- CNIG may not be encoded into CI/CD gating logic  
-- CNIG may not be implemented as runtime policy enforcement  
-- CNIG may not be used as a compliance or certification mechanism  
-- CNIG may not be treated as executable governance logic  
+* authorize action;
+* approve deployment;
+* certify safety;
+* establish compliance;
+* accept risk;
+* grant permission;
+* guarantee Admissibility.
 
-Any system referencing CNIG must treat it strictly as a conceptual model with no execution authority.
+A negative, provisional, conflicting, or unresolved CNIG analysis does not itself:
 
----
+* prohibit action;
+* block deployment;
+* revoke authority;
+* reject a transition;
+* impose a control.
 
-## 7. No Implementation Guarantee Clause
+Any operational consequence belongs to an external authority and governance process.
 
-CNIG is theoretical and interpretive.
-
-No guarantees are made regarding:
-
-- implementability  
-- correctness in software systems  
-- completeness of modeling  
-- suitability for production use  
-- safety or operational outcomes  
-
-Any attempt to implement or operationalize CNIG is an independent interpretation by the implementer.
+That external authority must remain separately identified and accountable.
 
 ---
 
-## 8. Restriction Boundary
+## 13. No Implementation or Outcome Guarantee
 
-CNIG may not be represented as:
+The Framework Materials are provided as a conceptual framework.
 
-- a production governance system  
-- a safety-certified system  
-- a runtime enforcement mechanism  
-- a formal verification framework  
-- a deployable compliance system  
+No representation or warranty is made concerning:
 
-This applies regardless of modification, embedding, or derivative interpretation.
+* completeness;
+* correctness for a particular system;
+* fitness for a particular purpose;
+* model completeness;
+* implementability;
+* formal soundness;
+* formal completeness;
+* prediction accuracy;
+* production suitability;
+* safety;
+* security;
+* compliance;
+* operational outcomes;
+* universal applicability.
+
+CNIG does not generate evidence about a system.
+
+Any analysis remains bounded by:
+
+* available evidence;
+* system scope;
+* assumptions;
+* represented relationships;
+* Governing Constraints;
+* time or phase;
+* model completeness;
+* the competence of the person or system applying it.
 
 ---
 
-## 9. Epistemic Limitation
+## 14. No Endorsement
 
-CNIG does not claim:
+Use of CNIG does not imply endorsement by Gaurav H. Thanki.
 
-- implementation completeness  
-- correctness guarantees  
-- universal applicability  
-- formal verification completeness  
+The name of Gaurav H. Thanki may not be used to:
 
-CNIG is a conceptual lens for interpreting system composition behavior.
+* endorse a product;
+* endorse a service;
+* endorse an implementation;
+* imply approval of an operational derivative;
+* imply certification;
+* imply partnership;
+* imply sponsorship
+
+without separate written permission.
+
+Canonical attribution is not endorsement.
 
 ---
 
-## 10. Liability Limitation
+## 15. Reservation of Rights
 
-To the maximum extent permitted by applicable law:
+All rights not expressly granted by this license are reserved by Gaurav H. Thanki.
 
-The author is not liable for any outcomes arising from:
+This license does not grant:
 
-- use or interpretation of CNIG  
-- system designs influenced by CNIG  
-- operational decisions informed by CNIG  
-- attempts to implement or adapt CNIG  
-- production failures, losses, or damages associated with CNIG references  
+* ownership of CNIG;
+* authorship rights;
+* authority to redefine the framework;
+* authority to issue official CNIG releases;
+* authority to create an official CNIG implementation;
+* authority to sublicense operational rights;
+* authority to represent a derivative as canonical CNIG.
+
+---
+
+## 16. Termination
+
+Permissions granted under this license terminate automatically upon material breach of its terms.
+
+Following termination, the breaching party must cease:
+
+* redistribution;
+* presentation of the material as authorized;
+* use of CNIG branding or attribution in a misleading manner;
+* distribution of unauthorized derivatives.
+
+Termination does not remove obligations concerning:
+
+* attribution;
+* copyright;
+* correction of misrepresentation;
+* liability limitations;
+* preservation of authorship.
+
+Permission may be restored only through:
+
+* full correction of the breach;
+* cessation of unauthorized use;
+* and, where requested, written confirmation from Gaurav H. Thanki.
+
+---
+
+## 17. Liability Limitation
+
+To the maximum extent permitted by applicable law, the Framework Materials are provided without warranty.
+
+Gaurav H. Thanki shall not be liable for claims, losses, damages, liabilities, costs, or consequences arising from:
+
+* use of CNIG;
+* reliance on CNIG;
+* interpretation of CNIG;
+* analysis performed through CNIG;
+* architectural decisions influenced by CNIG;
+* operational decisions informed by CNIG;
+* unauthorized implementations;
+* authorized external implementations;
+* modified or derivative works;
+* system failures;
+* security incidents;
+* compliance failures;
+* production loss;
+* data loss;
+* indirect or consequential damages.
 
 All use is at the user’s own risk.
 
 ---
 
-## 11. Canonical Reference
+## 18. Separation Rule
 
-Constraint-Native Infrastructure Governance (CNIG)  
-by Gaurav H. Thanki  
+The following separation must remain explicit:
+
+* **CNIG provides conceptual structural analysis.**
+* **External authorities make decisions.**
+* **External systems execute actions.**
+* **External implementations remain outside CNIG.**
+
+No reference, application, derivative, or implementation may collapse these roles and represent CNIG itself as an operational authority.
 
 ---
 
-## 12. Final Clause (Structural Separation Rule)
+## 19. Canonical Reference
 
-CNIG may be referenced, studied, and discussed as a conceptual framework.
+The canonical public reference is:
 
-However:
+> **Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki**
 
-CNIG must never function as an authority layer over any operational system.
+Canonical repository:
 
-All interpretations must preserve the separation between:
+`https://github.com/Gaurav-Thanki/CNIG`
 
-- interpretation (CNIG)  
-- execution (system runtime)
+Author ORCID:
+
+`https://orcid.org/0009-0000-3875-0606`
+
+---
+
+## 20. Final Clause
+
+CNIG may be read, studied, cited, discussed, taught, and applied as a conceptual framework under the terms of this license.
+
+CNIG must not be represented as an operational system, execution authority, enforcement mechanism, compliance engine, certification mechanism, or autonomous controller.
+
+Any implementation remains outside CNIG.
+
+Operational derivative rights are reserved unless separately and explicitly authorized in writing by Gaurav H. Thanki.
