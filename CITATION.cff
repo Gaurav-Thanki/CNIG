@@ -1,58 +1,52 @@
 cff-version: 1.2.0
-
 message: "Please cite the CNIG framework using the preferred citation metadata below."
-
 title: "Constraint-Native Infrastructure Governance (CNIG): A Conceptual Framework for Component-Correct, Composition-Inadmissible Systems"
 
 authors:
-
-* family-names: "Thanki"
-  given-names: "Gaurav H."
-  orcid: "https://orcid.org/0009-0000-3875-0606"
+  - family-names: "Thanki"
+    given-names: "Gaurav H."
+    orcid: "https://orcid.org/0009-0000-3875-0606"
 
 abstract: >-
-Constraint-Native Infrastructure Governance (CNIG) is a bounded conceptual
-framework for reasoning about admissible system States within Reachable State
-Space under composition constraints prior to execution. CNIG addresses
-component-correct, composition-inadmissible systems: systems in which
-individual components satisfy, or are materially consistent with, their local
-specifications, yet their composition makes a globally unintended or
-inadmissible State reachable. The framework integrates six canonical
-Primitives, four canonical Invariants, and ten canonical Failure Modes for
-analysing composition-induced Reachability, system-level Admissibility,
-Governing Constraints, Transition Paths, Effective Authority, Effective
-Capability, and Privilege Surface. CNIG is conceptual and non-operational; it
-does not execute, approve, enforce, remediate, or guarantee system changes.
+  Constraint-Native Infrastructure Governance (CNIG) is a bounded conceptual
+  framework for reasoning about admissible system States within Reachable State
+  Space under composition constraints prior to execution. CNIG addresses
+  component-correct, composition-inadmissible systems: systems in which
+  individual components satisfy, or are materially consistent with, their local
+  specifications, yet their composition makes a globally unintended or
+  inadmissible State reachable. The framework integrates six canonical
+  Primitives, four canonical Invariants, and ten canonical Failure Modes for
+  analysing composition-induced Reachability, system-level Admissibility,
+  Governing Constraints, Transition Paths, Effective Authority, Effective
+  Capability, and Privilege Surface. CNIG is conceptual and non-operational; it
+  does not execute, approve, enforce, remediate, or guarantee system changes.
 
 keywords:
-
-* "Constraint-Native Infrastructure Governance"
-* "CNIG"
-* "infrastructure governance"
-* "compositional systems"
-* "component-correct systems"
-* "composition-inadmissible systems"
-* "reachable state space"
-* "admissible system states"
-* "systems engineering"
-* "distributed systems"
-* "system architecture"
-* "identity governance"
+  - "Constraint-Native Infrastructure Governance"
+  - "CNIG"
+  - "infrastructure governance"
+  - "compositional systems"
+  - "component-correct systems"
+  - "composition-inadmissible systems"
+  - "reachable state space"
+  - "admissible system states"
+  - "systems engineering"
+  - "distributed systems"
+  - "system architecture"
+  - "identity governance"
 
 version: "1.0.0"
 date-released: "2026-08-02"
-
 repository: "https://github.com/Gaurav-Thanki/CNIG"
-
 license-url: "https://github.com/Gaurav-Thanki/CNIG/blob/v1.0.0/LICENSE"
 
 preferred-citation:
-type: generic
-authors:
-- family-names: "Thanki"
-given-names: "Gaurav H."
-orcid: "https://orcid.org/0009-0000-3875-0606"
-title: "Constraint-Native Infrastructure Governance (CNIG): A Conceptual Framework for Component-Correct, Composition-Inadmissible Systems"
-version: "1.0.0"
-year: 2026
-url: "https://github.com/Gaurav-Thanki/CNIG/releases/tag/v1.0.0"
+  type: generic
+  authors:
+    - family-names: "Thanki"
+      given-names: "Gaurav H."
+      orcid: "https://orcid.org/0009-0000-3875-0606"
+  title: "Constraint-Native Infrastructure Governance (CNIG): A Conceptual Framework for Component-Correct, Composition-Inadmissible Systems"
+  version: "1.0.0"
+  year: 2026
+  url: "https://github.com/Gaurav-Thanki/CNIG/releases/tag/v1.0.0"
