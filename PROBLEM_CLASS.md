@@ -4,221 +4,612 @@ Constraint-Native Infrastructure Governance (CNIG) by Gaurav H. Thanki
 
 ---
 
-## 1. The Situation
+## 1. Recognition Signature
 
-A practitioner is working on a system where:
+CNIG addresses:
 
-- the unexpected behavior is reproducible and observable
-- no component is failing
-- the design review looks correct
-- and the system is producing outcomes the architecture
-  was not intended to permit
+> **Component-correct, composition-inadmissible systems.**
 
-This is not an observability problem.
-The behavior is visible.
+These are systems in which:
 
-This is not a component problem.
-Components are correct.
+* individual components satisfy, or are materially consistent with, their local specifications;
+* local configurations, permissions, policies, and transitions may be valid;
+* no single local defect sufficiently explains the complete system-level condition;
+* but the composition makes a globally unintended or inadmissible State reachable.
 
-This is a structural problem.
-The composition of correct components has produced states
-that the design did not intend to be reachable.
+The defining distinction is:
 
-This is the problem class CNIG addresses.
+> Local correctness does not establish global Admissibility.
 
----
+CNIG therefore asks:
 
-## 2. What the Practitioner Has Already Tried
+> What did the composition make reachable?
 
-By the time CNIG becomes relevant, the standard diagnostic
-toolkit has been exhausted.
+and:
 
-**Observability** — metrics, traces, and logs confirm the
-behavior. The system is not hiding anything. The problem
-is not that the behavior is invisible. The problem is that
-nothing in the observable state explains why the architecture
-permits it.
-
-**Testing** — unit tests and integration tests pass. Components
-behave correctly in isolation. Pairwise integration tests
-return expected results. The behavior only appears at the
-composed system level.
-
-**Configuration review** — policies, access rules, and
-configuration files are correct as written. No visible
-misconfiguration. Reviewers cannot identify what structural
-decision enabled the unexpected state.
-
-**Incident correlation** — no deployment, no configuration
-change, and no external event cleanly explains why this
-outcome is possible. Or: the outcome has always been
-possible and was only recently triggered.
-
-**Architecture review** — the design looks sound. Component
-responsibilities are clear. Interfaces between components
-are correctly defined. No reviewer can point to a specific
-decision that introduced the problem.
-
-The components are correct.
-The configuration is correct.
-The design review passed.
-The system is producing states that should not be reachable.
+> Did the resulting State remain admissible under the constraints governing the complete composition?
 
 ---
 
-## 3. Why Standard Tools Stop Here
+## 2. The Structural Condition
 
-Each standard tool evaluates behavior at the component level
-or detects deviation from expected state at runtime.
+The CNIG problem class exists where the material system-level condition depends on relationships between components rather than on one component alone.
 
-None of them are designed to reason about what states become
-structurally possible when correct components are composed.
+Relevant relationships may include:
 
-The question CNIG addresses is not:
+* service interaction;
+* delegation;
+* inheritance;
+* identity mapping;
+* shared state;
+* workflow sequencing;
+* downstream execution;
+* resource dependency;
+* cross-domain integration;
+* changed topology;
+* accumulated transitions;
+* authority composition;
+* constraint interaction.
 
-> "Why did this component fail?"
+The decisive condition is not merely that several components are present.
 
-It is:
+The composition must materially affect one or more of:
 
-> "Why did the architecture make this state reachable?"
-
-That question cannot be answered by examining components.
-It can only be answered by reasoning about composition
-structure.
-
-**Observability** tells you what the system is doing.
-It does not tell you why the structure of the system makes
-that behavior reachable in the first place.
-
-**Formal verification** verifies components against their
-specifications. It does not model the state space that
-emerges when verified components are composed.
-
-**Chaos engineering** introduces failure to find fragility.
-The problem class CNIG addresses does not require failure —
-it emerges from correct operation under composition.
-
-**Policy-as-code** enforces declared constraints. It cannot
-enforce constraints on states that were not anticipated when
-the policy was written.
-
-**Architecture patterns** describe how to structure components
-at design time. They do not describe what becomes reachable
-at composition time.
-
-The tools are not wrong.
-
-They are operating correctly within their scope.
-
-The problem lives outside their scope.
+* Reachable State Space;
+* Transition Paths;
+* Effective Authority;
+* Effective Capability;
+* Governing Constraints;
+* Privilege Surface;
+* valid continuation;
+* Target-State Admissibility.
 
 ---
 
-## 4. The Precise Failure Condition
+## 3. Local Correctness
 
-The failure condition CNIG addresses has three properties:
+Within the recognition signature, **component-correct** means that local correctness is materially relevant to the problem being examined.
 
-**Local correctness** — every component behaves correctly
-by its own specification.
+Local correctness may concern:
 
-**Global incorrectness** — the composed system produces
-states that are not intended, not anticipated, or not
-admissible under the system's governing intent.
+* component behaviour;
+* configuration;
+* local authorization;
+* local transition validity;
+* interface conformance;
+* policy evaluation;
+* workflow-stage acceptance;
+* local resource effects.
 
-**Structural cause** — the cause is not a bug, a
-misconfiguration, or a failure. It is the structure of
-the composition itself. The architecture permitted a state
-it was not designed to permit.
+In a completed retrospective analysis, local correctness should be supported by evidence.
 
-This failure condition appears predictably in:
+During an initial or prospective analysis, it may remain:
 
-- distributed systems where service interaction creates
-  emergent state not present in any individual service
-- identity and access systems where role composition
-  expands effective privilege beyond declared permissions
-- orchestration systems where execution ordering creates
-  new reachable states not anticipated in workflow design
-- multi-agent systems where agent interaction produces
-  behavior outside any individual agent's specification
-- infrastructure systems where configuration coupling
-  produces instability under scale
+* established;
+* PROVISIONAL;
+* CONFLICTING;
+* UNRESOLVED.
 
-In each domain the pattern is the same.
+CNIG must not infer local correctness merely because:
 
-Local correctness does not guarantee global correctness.
+* no error was reported;
+* monitoring remained green;
+* execution completed;
+* a policy existed;
+* a reviewer found no defect;
+* the system remained available.
 
-The composition structure determines what is reachable.
-What is reachable is not always what was intended.
+Where a direct component defect sufficiently explains the material outcome, that explanation should remain primary.
 
----
-
-## 5. What Changes Under CNIG
-
-CNIG shifts the reasoning question from:
-
-> "Is this component correct?"
-
-to:
-
-> "What system states become reachable when these
-> components interact?"
-
-This moves analysis from execution-level correctness to
-structure-induced possibility space.
-
-It introduces two distinctions that standard tools do
-not make:
-
-**Reachable vs Admissible** — not all states that can
-be reached are states that should be reached. CNIG
-reasons about the difference between what the composition
-makes possible and what the governing intent permits.
-
-**Execution correctness vs Governance structure** — local
-correctness is an execution property. Global admissibility
-is a structural property. They are not the same evaluation
-and do not imply each other.
-
-These distinctions are what make the problem class
-tractable.
-
-The question is not what the system did.
-The question is what the structure allowed.
+CNIG is not a mechanism for relabelling ordinary local failure as compositional failure.
 
 ---
 
-## 6. When CNIG Is the Appropriate Lens
+## 4. Composition-Inadmissibility
 
-CNIG applies when:
+A composition-inadmissible condition exists where:
 
-- all components are correct and the system is still
-  producing unintended outcomes
-- the failure cannot be attributed to any single component
-- the unexpected behavior is reproducible but not
-  structurally explained by the design
-- access or privilege has expanded without explicit
-  configuration change
-- integration between correct systems produces states
-  that were not designed to be reachable
-- the question is why the architecture permitted
-  something, not why a component failed
+1. a State or Transition Path is structurally reachable through the effective composition;
+2. the State or path conflicts with the supported constraints governing the complete composition;
+3. the material conflict cannot be explained adequately within one local component boundary.
 
-CNIG is not the appropriate lens for:
+The condition should identify:
 
-- component-level bugs with traceable causes
-- configuration errors in individual services
-- performance degradation with observable bottlenecks
-- failures that resolve under standard diagnostic methods
-- situations where the problem is interpretive coherence
-  across observers rather than structural possibility
-- degradation of unified system understanding under
-  distributed observation pressure
-- cases where multiple observers reconstruct different
-  system realities from the same underlying state
+* the bounded system;
+* the relevant Source State;
+* participating components;
+* the complete Transition Path;
+* material Intermediate States;
+* the Target State;
+* the structural relationship that made the State reachable;
+* applicable Governing Constraints;
+* supported Governing Intent;
+* the resulting Admissibility Condition.
+
+A State being:
+
+* unexpected;
+* undocumented;
+* unanticipated;
+* undesirable;
+* unfamiliar;
+* difficult to explain
+
+does not independently establish inadmissibility.
+
+Inadmissibility requires a supported governing basis.
 
 ---
 
-## Canonical Reference
+## 5. Reachability Is Not Admissibility
 
-Constraint-Native Infrastructure Governance (CNIG)
-by Gaurav H. Thanki
+A State may be:
+
+* reachable and admissible;
+* reachable but inadmissible;
+* reachable with Admissibility unresolved;
+* represented but unreachable;
+* absent from the Structural Model but structurally reachable.
+
+CNIG does not treat every expansion of Reachable State Space as failure.
+
+A newly reachable State may be:
+
+* intended;
+* represented;
+* authorized;
+* governed;
+* admissible.
+
+The problem class becomes material where composition creates or exposes a reachable State whose relationship to Governing Intent requires system-level evaluation.
+
+---
+
+## 6. The Minimum CNIG Question
+
+The minimum CNIG question is:
+
+> What State, authority, capability, resource effect, or Transition Path exists only because these elements are composed?
+
+The necessary second question is:
+
+> Does that composed condition remain admissible?
+
+These questions move analysis beyond isolated component boundaries without presuming that the composition has failed.
+
+---
+
+## 7. Applicability Conditions
+
+CNIG may be materially applicable where several of the following are supported:
+
+* several components, services, domains, identities, tools, or agents participate in the material outcome;
+* local correctness is supported or materially relevant;
+* no single local defect sufficiently explains the complete condition;
+* the effective composition differs materially from the represented Structural Model;
+* composition introduces or removes a Transition Path;
+* composition changes Effective Authority or Effective Capability;
+* an unchanged local permission acquires broader downstream effects;
+* several locally valid transitions accumulate into an unevaluated Target State;
+* separate governance regimes apply to a shared or Joint State;
+* declared governance does not constrain the complete composition as intended;
+* a State has no available continuation that preserves Admissibility;
+* the central question concerns why the system structure permits a result rather than only why one component acted.
+
+CNIG applicability may remain PROVISIONAL while evidence is incomplete.
+
+---
+
+## 8. Conditions That Are Not Required
+
+CNIG does not require that:
+
+* the behaviour has already occurred;
+* the behaviour is reproducible;
+* the behaviour is fully observable;
+* every standard diagnostic method has been exhausted;
+* every component has been formally proven correct;
+* the architecture review passed;
+* the configuration is known to be perfect;
+* a production incident exists;
+* a canonical Failure Mode has already been identified.
+
+CNIG may be used prospectively before a State is executed.
+
+It may also be used retrospectively where execution evidence reveals a material structural relationship or Transition Path.
+
+---
+
+## 9. Prospective Application
+
+Prospective CNIG analysis asks what the current or proposed composition may make reachable.
+
+It may examine:
+
+* a planned integration;
+* a proposed authority relationship;
+* a new workflow stage;
+* a service dependency;
+* a cross-domain mapping;
+* a topology change;
+* a new agent-to-tool path;
+* a migration;
+* a failover design;
+* a policy interaction;
+* a proposed Target State.
+
+Prospective analysis does not prove that a State will occur.
+
+It identifies structural possibility and evaluates the represented Admissibility conditions.
+
+---
+
+## 10. Retrospective Application
+
+Retrospective CNIG analysis begins from evidence of:
+
+* an executed Transition Path;
+* a reached Target State;
+* an authority path;
+* a resource effect;
+* a topology change;
+* an unavailable continuation;
+* a Joint State;
+* a system-level outcome.
+
+Execution evidence may establish that a State was reachable.
+
+It does not independently establish:
+
+* local correctness;
+* structural causation;
+* Governing Intent;
+* Target-State Admissibility;
+* a canonical Failure Mode.
+
+Those conclusions require separate evidence.
+
+---
+
+## 11. Simpler Sufficient Explanations
+
+CNIG should not displace a simpler sufficient explanation.
+
+Examples include:
+
+* a direct software defect;
+* an explicit misconfiguration;
+* an incorrect permission assignment;
+* malformed input;
+* hardware failure;
+* resource exhaustion;
+* an unavailable dependency;
+* message loss;
+* an explicit policy violation;
+* compromised credentials;
+* a direct unauthorized action;
+* a known operational mistake;
+* intended probabilistic behaviour;
+* ordinary variation within represented bounds.
+
+A local explanation and a compositional condition may coexist.
+
+The analysis should determine whether composition remains necessary to explain the material system-level result.
+
+---
+
+## 12. Relationship to Observability
+
+Observability may provide evidence concerning:
+
+* States;
+* transitions;
+* topology;
+* authority use;
+* resource effects;
+* execution order;
+* temporal phase;
+* system outcomes.
+
+CNIG does not replace observability.
+
+Observability also does not automatically provide:
+
+* the complete Reachable State Space;
+* every alternate Transition Path;
+* Governing Intent;
+* Target-State Admissibility;
+* complete authority lineage;
+* complete Structural Model coverage.
+
+The relationship depends on the scope and quality of the observability system.
+
+CNIG should not claim that observability is inherently incapable of supporting compositional analysis.
+
+---
+
+## 13. Relationship to Testing
+
+Testing may evaluate:
+
+* local component behaviour;
+* interfaces;
+* integration paths;
+* system-level transitions;
+* properties of composed systems;
+* expected Target States;
+* prohibited States.
+
+CNIG does not assume that testing is limited to isolated components or pairwise interaction.
+
+Testing may provide strong evidence about Reachability and execution behaviour.
+
+Its conclusions remain bounded by:
+
+* tested Source States;
+* represented paths;
+* test coverage;
+* assumptions;
+* environment;
+* temporal conditions.
+
+Passing tests do not establish the Admissibility of every structurally reachable State.
+
+Failing tests do not automatically establish a CNIG condition.
+
+---
+
+## 14. Relationship to Formal Methods
+
+Formal methods may represent and verify:
+
+* component properties;
+* transition systems;
+* composed systems;
+* invariants;
+* Reachability;
+* safety properties;
+* temporal properties;
+* authority relationships.
+
+CNIG does not claim that formal verification is inherently limited to component boundaries.
+
+A formal model may provide powerful evidence for CNIG analysis.
+
+Its conclusions remain bounded by:
+
+* model scope;
+* assumptions;
+* represented components;
+* represented relationships;
+* completeness of constraints;
+* correspondence between the model and the effective system.
+
+Formalization remains external to CNIG.
+
+It does not alter the canonical framework.
+
+---
+
+## 15. Relationship to Policy and Enforcement Systems
+
+Policy-as-code and other enforcement systems may:
+
+* encode constraints;
+* evaluate requests;
+* block transitions;
+* establish evidence;
+* limit authority;
+* constrain resource effects.
+
+CNIG does not assume that such systems can govern only anticipated States.
+
+Their effectiveness depends on:
+
+* policy scope;
+* represented relationships;
+* enforcement coverage;
+* authority;
+* complete Transition Paths;
+* downstream effects;
+* Joint States;
+* temporal alignment.
+
+A policy being present does not establish that it governs the complete composition.
+
+A policy system may nevertheless provide or implement effective compositional constraints.
+
+That implementation remains outside CNIG.
+
+---
+
+## 16. Relationship to Architecture and Systems Engineering
+
+Architecture and systems-engineering methods may represent:
+
+* components;
+* relationships;
+* interfaces;
+* authority;
+* constraints;
+* State transitions;
+* dependencies;
+* failure conditions;
+* system-level properties.
+
+CNIG does not claim that architecture methods are inherently unable to represent Reachability or composition.
+
+CNIG contributes a bounded vocabulary and problem framing centred on:
+
+* component-correct composition;
+* Reachable State Space;
+* Admissible System States;
+* State Transition Validation;
+* Execution vs Governance Separation;
+* Privilege Surface;
+* canonical Invariants;
+* canonical Failure Modes.
+
+It may be used alongside existing architecture and systems-engineering practices.
+
+---
+
+## 17. Domain Illustrations
+
+The problem class may appear in many domains.
+
+Illustrative possibilities include:
+
+### Distributed systems
+
+Locally valid service transitions may accumulate into a Joint State absent from one service’s model.
+
+### Identity and access systems
+
+Several bounded authority relationships may combine into broader Effective Authority or Effective Capability.
+
+### Orchestration and workflow systems
+
+Individually accepted stages may reach a Target State that no stage evaluates globally.
+
+### AI and multi-agent systems
+
+Agents, tools, identities, and services may compose into a resource-effect path broader than the initiating agent’s represented capability.
+
+### Infrastructure and cloud systems
+
+Topology, control planes, automation, identity, and resource relationships may create a management or recovery State not represented within one component boundary.
+
+These are hypothetical structural possibilities.
+
+Domain membership does not establish CNIG applicability or a Failure Mode.
+
+---
+
+## 18. What CNIG Does Not Address by Itself
+
+The following are not CNIG conditions by themselves:
+
+* observer disagreement;
+* fragmented evidence;
+* inconsistent narratives;
+* semantic incoherence;
+* incomplete reconstruction;
+* loss of unified understanding;
+* LLM reasoning error;
+* uncertainty about what happened;
+* different observers describing the same State differently.
+
+Those conditions may affect the quality of evidence.
+
+They become relevant to CNIG only where evidence establishes an actual structural difference involving:
+
+* identity;
+* authority;
+* constraints;
+* State;
+* temporal phase;
+* Transition Path;
+* Reachability;
+* Admissibility.
+
+The actual system condition—not the observer’s difficulty reconstructing it—is CNIG’s analytical object.
+
+---
+
+## 19. Failure Mode Boundary
+
+CNIG applicability does not require that a canonical Failure Mode be established.
+
+A system may be within the CNIG problem class while:
+
+* no Failure Mode is yet supported;
+* several Failure Modes remain PROVISIONAL;
+* evidence supports competing classifications;
+* the relevant condition is best recorded as UNRESOLVED.
+
+Failure Mode attribution must follow the complete canonical definitions in:
+
+`04_FAILURE_MODES.md`
+
+The problem class must not be reduced to a keyword match against a Failure Mode name.
+
+---
+
+## 20. Applicability Result
+
+A disciplined applicability assessment should conclude with one of:
+
+* **CNIG materially applicable**
+* **CNIG provisionally applicable**
+* **CNIG not required by current evidence**
+* **Applicability CONFLICTING**
+* **Applicability UNRESOLVED**
+
+The conclusion should state:
+
+* the bounded system;
+* why composition is or is not necessary;
+* the status of local correctness;
+* the relevant Reachability question;
+* the relevant Admissibility question;
+* simpler explanations considered;
+* material evidence still required.
+
+---
+
+## 21. Non-Operational Boundary
+
+Identifying a system as CNIG-relevant does not authorize:
+
+* a configuration change;
+* a policy change;
+* an identity change;
+* an access change;
+* remediation;
+* deployment;
+* production approval;
+* enforcement;
+* autonomous action.
+
+CNIG provides structural analysis.
+
+Authority and action remain external.
+
+External applications may reference or apply CNIG concepts.
+
+Any implementation remains outside CNIG and does not alter the canonical framework.
+
+---
+
+## 22. Canonical Problem Statement
+
+The canonical problem statement is:
+
+> CNIG addresses component-correct, composition-inadmissible systems: systems in which each component satisfies its local specification, yet their composition makes a globally unintended or inadmissible State reachable without requiring a component fault, explicit policy violation, or conventional misconfiguration.
+
+This statement identifies the problem class.
+
+It does not assert that:
+
+* every component is formally proven correct;
+* every unintended State is inadmissible;
+* every complex-system outcome belongs to CNIG;
+* conventional tools are incapable of compositional analysis;
+* CNIG replaces existing systems disciplines.
+
+---
+
+## 23. Closing Principle
+
+The shortest reliable recognition rule is:
+
+> Do not stop at whether each component worked.
+
+Ask:
+
+> What did their composition make possible?
+
+Then determine:
+
+> Whether the resulting State remained admissible.
